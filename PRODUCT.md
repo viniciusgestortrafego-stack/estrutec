@@ -1,0 +1,2 @@
+# Estrutec Monitoramento
+Landing page em português para gerar leads por WhatsApp entre empresas, condomínios e residências. Sete seções baseadas na copy consolidada, logo anexada e ativos do site institucional. Identidade definida pelo usuário: preto/grafite, branco e laranja, premium e tecnológica sem excessos. CTAs usam exatamente o URL fornecido. Sem coleta local ou promessa de cadastro salvo. Não inventar avaliações ou números de clientes.
