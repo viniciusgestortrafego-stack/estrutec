@@ -3,3 +3,5 @@ work/
 outputs/*.zip
 outputs/*screenshot*
 dist/
+
+tmp/
