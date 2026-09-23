@@ -34,3 +34,27 @@
 @media(max-width:760px){.service-thumb{height:120px}.footer-inner{grid-template-columns:1fr;gap:28px}.footer-top{width:auto}.footer-contacts{font-size:13px}}
 @media(max-width:360px){.service-thumb{height:160px}}
 @media print{.skip{display:none!important}.header{position:static}.service-thumb{break-inside:avoid}}
+
+/* Smart pole photo and Google reviews. */
+.services .smart-pole{grid-template-columns:260px 1fr;gap:34px;align-items:stretch;padding:0;overflow:hidden}
+.smart-pole-photo{width:100%;height:330px;object-fit:cover;object-position:center 42%;display:block}
+.smart-pole-copy{padding:34px 38px 34px 0;display:flex;flex-direction:column;justify-content:center}
+.services .smart-pole h3{font-size:1.55rem}
+.services .smart-pole p{margin-top:14px}
+.services .smart-pole strong{max-width:54ch;margin-top:24px;padding-top:22px;border-top:1px solid #ffffff26}
+.clients>.client-logos{display:grid;grid-template-columns:repeat(7,1fr);gap:30px;align-items:center;margin-top:25px}
+.client-logos img{max-width:100%;width:130px;height:70px;object-fit:contain;filter:grayscale(1)}
+.clients>.google-reviews{display:block;margin-top:38px;padding-top:34px;border-top:1px solid #cdd0d2}
+.reviews-heading{display:flex;justify-content:space-between;gap:30px;align-items:end}
+.reviews-heading>div{display:grid;grid-template-columns:auto auto;align-items:center;gap:5px 14px}
+.google-label{grid-column:1/-1;font-size:14px;color:var(--muted)}
+.reviews-heading strong{font-size:2rem;line-height:1}
+.reviews-heading strong span{color:#e66d1f;font-size:1rem;letter-spacing:2px}
+.reviews-heading small{color:var(--muted)}
+.reviews-heading a{font-size:13px;font-weight:700}
+.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}
+.review-grid blockquote{margin:0;background:#fff;padding:24px;border-left:3px solid var(--orange);min-height:150px;display:flex;flex-direction:column;justify-content:space-between}
+.review-grid blockquote p{font-size:16px;color:var(--ink)}
+.review-grid cite{font-size:12px;color:var(--muted);font-style:normal;margin-top:22px}
+@media(max-width:1050px){.clients>.client-logos{gap:20px}}
+@media(max-width:760px){.services .smart-pole{grid-template-columns:1fr;gap:0;padding:0}.smart-pole-photo{height:360px;object-position:center 38%}.smart-pole-copy{padding:25px}.services .smart-pole strong{max-width:none}.services .smart-pole h3{font-size:1.25rem}.clients>.client-logos{grid-template-columns:repeat(3,1fr);gap:15px}.client-logos img{height:55px}.reviews-heading{align-items:start;flex-direction:column}.review-grid{grid-template-columns:1fr}.review-grid blockquote{min-height:0}}
