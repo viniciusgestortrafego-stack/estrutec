@@ -58,3 +58,12 @@
 .review-grid cite{font-size:12px;color:var(--muted);font-style:normal;margin-top:22px}
 @media(max-width:1050px){.clients>.client-logos{gap:20px}}
 @media(max-width:760px){.services .smart-pole{grid-template-columns:1fr;gap:0;padding:0}.smart-pole-photo{height:360px;object-position:center 38%}.smart-pole-copy{padding:25px}.services .smart-pole strong{max-width:none}.services .smart-pole h3{font-size:1.25rem}.clients>.client-logos{grid-template-columns:repeat(3,1fr);gap:15px}.client-logos img{height:55px}.reviews-heading{align-items:start;flex-direction:column}.review-grid{grid-template-columns:1fr}.review-grid blockquote{min-height:0}}
+
+/* Larger service photography with less aggressive cropping. */
+.service-thumb{height:250px;object-position:center 40%}
+.services article:nth-child(2) .service-thumb{object-position:center 35%}
+.services article:nth-child(4) .service-thumb{object-position:center 35%}
+.services article:nth-child(5) .service-thumb{object-position:center 45%}
+.services article:nth-child(6) .service-thumb{object-position:center 45%}
+@media(max-width:760px){.service-thumb{height:195px}}
+@media(max-width:360px){.service-thumb{height:230px}}
