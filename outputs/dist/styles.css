@@ -340,3 +340,5 @@ footer{background:var(--ink);color:#c6c9cb;padding-block:46px 90px}
 .location-map{flex:1 0 100%;height:460px;border-radius:4px;overflow:hidden;background:#262a2d}
 .location-map iframe{display:block;width:100%;height:100%;border:0}
 @media(max-width:760px){.location-map{flex:none;width:100%;height:420px}}
+
+.review-grid cite b{color:var(--ink);font-weight:800}
