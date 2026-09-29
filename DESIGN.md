@@ -4,11 +4,10 @@
 Premium, restrained landing page in Brazilian Portuguese. The user-pinned palette uses black, graphite, white and orange. Primary conversion is a WhatsApp conversation for a security quotation; the page has no lead form and no simulated submission.
 
 ## Actual implementation
-- Seven main sections: hero; security failure problem; technology solutions; integrated system and audiences; five-step process; operational trust and client logos; FAQ with final quotation call to action.
-- Sticky dark header with brand logo, desktop anchor navigation, and persistent quotation button. Mobile hides the anchor navigation while preserving the quotation action.
-- Desktop hero uses a two-column editorial composition. A large question and orange emphasis sit beside a monitoring-center photograph with a dark readability gradient and caption.
-- Subsequent sections alternate white, pale graphite and dark graphite surfaces. Services use open columns and fine horizontal rules. The process uses meaningful sequential numbering. FAQ uses native details/summary disclosures.
-- Footer repeats the logo, positioning line and back-to-top link.
+- Section order (September 29 revision, merging user feedback with the "Landing Page Vendas V2" brief): hero "Sua segurança precisa de mais do que câmeras" with lead form; "O que a Estrutec entrega para você" (six benefits); technologies (photo cards, CTA card, four icon items, AI band); problem with cost-of-failure block and "Ter câmeras não é o mesmo que ter um sistema de segurança confiável" conclusion; orange maintenance band; "Por que contratar a Estrutec?" (six numbered reasons); Poste Inteligente Estrutec; "Você não precisa de mais equipamentos. Precisa de uma estratégia de segurança." with audiences; "Do diagnóstico ao monitoramento" five-step process; "Atendimento em São Paulo" with client logos and Google reviews; FAQ; closing "Sua segurança não pode depender da sorte."
+- Sticky dark header with logo, anchor navigation (hidden below 1050px) and quotation button. A floating WhatsApp button stays visible on every viewport.
+- Hero uses a full-height monitoring photograph on the right behind a dark gradient, an uppercase display headline with orange emphasis, a "+"-joined solution stack and the lead form panel.
+- Sections alternate white, pale graphite, dark graphite and orange surfaces. The process uses numbered circles joined by a line (vertical timeline on mobile). FAQ uses native details/summary disclosures.
 
 ## Tokens
 - Ink: #111315. Dark section: #1c2023.
@@ -26,7 +25,7 @@ Breakpoints at 1050px, 760px and 360px reduce gutters, stack editorial columns a
 ## Interaction and accessibility
 Anchor navigation, skip link, focus-visible outlines, themed text selection, semantic headings, descriptive image alternatives and native FAQ controls are implemented. JavaScript limits the FAQ to one open answer. The disclosures remain functional without JavaScript. Smooth scrolling and short button color transitions respect reduced-motion preferences.
 
-All six conversion links use this exact destination, both in HTML and the script:
+All conversion links use this exact destination, both in HTML and the script:
 https://wa.me/551196278767?text=Ol%C3%A1%20vi%20dos%20an%C3%BAncios%20e%20quero%20fazer%20um%20or%C3%A7amento
 
 ## Review evidence and limits
