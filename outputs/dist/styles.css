@@ -342,3 +342,11 @@ footer{background:var(--ink);color:#c6c9cb;padding-block:46px 90px}
 @media(max-width:760px){.location-map{flex:none;width:100%;height:420px}}
 
 .review-grid cite b{color:var(--ink);font-weight:800}
+
+.button.ghost{background:transparent;color:#fff;border:1px solid #ffffff55;justify-content:center;gap:10px}
+.button.ghost:hover{background:#ffffff14}
+.button svg,.ig-link svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;flex:none}
+.ig-link{display:flex;align-items:center;gap:8px}
+.location{gap:20px 24px}
+.location>div:first-child{margin-right:auto}
+@media(max-width:760px){.location .button.ghost{width:100%}}
