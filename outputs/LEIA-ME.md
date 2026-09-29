@@ -14,7 +14,7 @@ Abra `dist/index.html` no navegador. A página funciona sem instalação. Para p
 
 ## Contato e geração de leads
 
-Todos os CTAs principais abrem exatamente o WhatsApp informado, com a mensagem fornecida. O visitante inicia o atendimento no WhatsApp; não existe formulário com banco de dados nem envio de informações para outro serviço. Não há analytics ou rastreadores nesta versão.
+Todos os CTAs principais abrem exatamente o WhatsApp informado, com a mensagem fornecida. O visitante inicia o atendimento no WhatsApp; não existe formulário com banco de dados nem envio de informações para outro serviço. O Google Tag Manager (contêiner GTM-5DLHWFCJ) está instalado no `index.html`; a medição é configurada dentro do próprio GTM.
 
 Endereço mantido: https://wa.me/551196278767?text=Ol%C3%A1%20vi%20dos%20an%C3%BAncios%20e%20quero%20fazer%20um%20or%C3%A7amento
 
