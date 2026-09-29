@@ -327,3 +327,11 @@ footer{background:var(--ink);color:#c6c9cb;padding-block:46px 90px}
 @media(max-width:370px){.form-fields{grid-template-columns:1fr}.lead-panel{padding:18px}.logo{width:128px}.button.small{font-size:11px;gap:8px}.wrap{padding-inline:18px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 @media print{.skip,.whatsapp-float{display:none!important}.header{position:static}}
+
+/* Location */
+.location{margin-top:55px;padding:32px 36px;background:var(--ink);color:#fff;border-radius:4px;display:flex;align-items:center;justify-content:space-between;gap:40px}
+.location h3{font-size:1.4rem;margin-bottom:10px}
+.location address{font-style:normal;color:#c4c8cb;font-size:15px;line-height:1.6}
+.location .button{flex:none}
+.footer-contacts a b{color:var(--orange)}
+@media(max-width:760px){.location{flex-direction:column;align-items:flex-start;padding:26px 24px;gap:22px}.location .button{width:100%}}
