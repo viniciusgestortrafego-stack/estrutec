@@ -37,7 +37,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="lead-panel" id="cadastro">
       <h2>Fale com um especialista em segurança</h2>
       <p>Cadastre-se e continue o atendimento pelo WhatsApp.</p>
-      <form id="lead-form" aria-label="Solicitar orçamento" method="post">
+      <form id="lead-form" class="lead-form" data-origem="formulario-topo" aria-label="Solicitar orçamento" method="post">
         <div class="form-fields">
           <label>Seu nome<input name="nome" autocomplete="name" required minlength="2" maxlength="120" placeholder="Como podemos chamar você?"></label>
           <label>WhatsApp com DDD<input name="telefone" type="tel" inputmode="tel" autocomplete="tel" required minlength="10" maxlength="20" pattern="[+0-9 ()\-]{10,20}" placeholder="(11) 99999-9999"></label>
@@ -47,9 +47,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="form-trap" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
         <p class="form-privacy">Usaremos seus dados para responder à sua solicitação de orçamento. Ao enviar, você solicita o contato da Estrutec.</p>
-        <button class="button" id="lead-submit" type="submit" disabled>Cadastrar e falar no WhatsApp <span aria-hidden="true">↗</span></button>
-        <p id="form-status" role="status" aria-live="polite"></p>
-        <a id="whatsapp-continue" hidden data-whatsapp href="https://wa.me/551196278767?text=Ol%C3%A1%20vi%20dos%20an%C3%BAncios%20e%20quero%20fazer%20um%20or%C3%A7amento" target="_blank" rel="noopener noreferrer">Continuar no WhatsApp ↗</a>
+        <button class="button lead-submit" type="submit" disabled>Cadastrar e falar no WhatsApp <span aria-hidden="true">↗</span></button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+        <a class="whatsapp-continue" hidden data-whatsapp href="https://wa.me/551196278767?text=Ol%C3%A1%20vi%20dos%20an%C3%BAncios%20e%20quero%20fazer%20um%20or%C3%A7amento" target="_blank" rel="noopener noreferrer">Continuar no WhatsApp ↗</a>
         <noscript>Ative o JavaScript para enviar o cadastro ou use um dos links de WhatsApp da página.</noscript>
       </form>
     </div>
