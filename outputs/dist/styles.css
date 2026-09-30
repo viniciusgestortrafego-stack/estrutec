@@ -402,3 +402,20 @@ footer{background:var(--ink);color:#c6c9cb;padding-block:46px 90px}
 
 .services article:nth-child(4) .service-thumb{object-position:center 30%}
 @media(max-width:760px){.services article:nth-child(4) .service-thumb{object-position:40% 32%}}
+
+/* Night vision section */
+.night{background:var(--ink);color:#fff}
+.night-grid{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1fr);gap:70px;align-items:center}
+.night-photo{position:relative;border-radius:4px;overflow:hidden;aspect-ratio:1/1;max-width:560px;width:100%}
+.night-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.night-tag{position:absolute;bottom:16px;font-size:12px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:7px 12px;border-radius:3px;background:#111315d9;color:#fff;border:1px solid #ffffff33}
+.night-tag.left{left:16px}
+.night-tag.right{right:16px;color:var(--orange);border-color:var(--orange)}
+.night-copy h2{font-size:clamp(2rem,3.6vw,3.2rem);font-weight:800;text-transform:uppercase;line-height:1.05;letter-spacing:-.04em}
+.night-copy h2 span{color:var(--orange)}
+.night-copy>p{color:#c4c8cb;margin:22px 0 26px;font-size:17px}
+.night-copy .check-list{grid-template-columns:1fr;gap:14px;margin-bottom:34px}
+.night-copy .check-list li{font-size:16px}
+.night-copy .check-list li:after{border-color:var(--ink)}
+@media(max-width:860px){.night-grid{grid-template-columns:1fr;gap:36px}.night-photo{max-width:none}}
+@media(max-width:760px){.night-tag{font-size:10px;padding:6px 8px;bottom:10px}.night-tag.left{left:10px}.night-tag.right{right:10px}.night-copy .button{width:100%}}
