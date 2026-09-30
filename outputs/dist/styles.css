@@ -480,3 +480,5 @@ body:has(#lead-modal[open]){overflow:hidden}
 .pole{background:var(--paper)}
 
 .clients-section .clients{margin-top:0;border-top:0;padding-top:0}
+
+.lead-panel .lead-submit{margin-top:20px}
