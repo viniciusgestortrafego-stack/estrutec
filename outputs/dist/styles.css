@@ -475,3 +475,12 @@ footer{background:var(--ink);color:#c6c9cb;padding-block:46px 90px}
 .modal-close:focus-visible{outline:3px solid var(--orange-dark);outline-offset:0}
 body:has(#lead-modal[open]){overflow:hidden}
 @media(max-width:760px){#lead-modal .lead-panel{padding:44px 20px 20px}}
+
+/* Section order changed: keep light and dark bands alternating. */
+.pole{background:var(--paper)}
+.why{background:var(--paper);color:var(--ink)}
+.why .section-intro h2 span{color:var(--orange-dark)}
+.why .section-intro p{color:var(--muted)}
+.why-grid li{border-top-color:var(--line)}
+.why-grid li:before{color:var(--orange-dark)}
+.why-grid p{color:var(--muted)}
