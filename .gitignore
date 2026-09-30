@@ -2,6 +2,6 @@ work/
 .sites-runtime/
 outputs/*.zip
 outputs/*screenshot*
-dist/
+/dist/
 
 tmp/
