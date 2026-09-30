@@ -1,35 +1,35 @@
 @font-face {
-  font-family: 'Manrope';
+  font-family: 'Barlow';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(assets/manrope-0.ttf) format('truetype');
+  src: url(assets/barlow-400.woff2) format('woff2');
 }
 @font-face {
-  font-family: 'Manrope';
+  font-family: 'Barlow';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(assets/manrope-1.ttf) format('truetype');
+  src: url(assets/barlow-500.woff2) format('woff2');
 }
 @font-face {
-  font-family: 'Manrope';
+  font-family: 'Barlow';
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(assets/manrope-2.ttf) format('truetype');
+  src: url(assets/barlow-600.woff2) format('woff2');
 }
 @font-face {
-  font-family: 'Manrope';
+  font-family: 'Barlow';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(assets/manrope-3.ttf) format('truetype');
+  src: url(assets/barlow-700.woff2) format('woff2');
 }
 @font-face {
-  font-family: 'Manrope';
+  font-family: 'Barlow';
   font-style: normal;
   font-weight: 800;
   font-display: swap;
-  src: url(assets/manrope-4.ttf) format('truetype');
+  src: url(assets/barlow-800.woff2) format('woff2');
 }
