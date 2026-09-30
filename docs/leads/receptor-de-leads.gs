@@ -4,7 +4,7 @@
  * { ok: true, requestId: "<mesmo id enviado pelo site>" }
  */
 const ABA = 'Leads';
-const COLUNAS = ['Data', 'Nome', 'WhatsApp', 'Cidade', 'O que deseja proteger', 'O que procura', 'ID da solicitação'];
+const COLUNAS = ['Data', 'Nome', 'WhatsApp', 'Cidade', 'O que deseja proteger', 'O que procura', 'Origem', 'ID da solicitação'];
 
 function doPost(e) {
   const lock = LockService.getScriptLock();
@@ -28,6 +28,7 @@ function doPost(e) {
         limpar(dados.cidade, 100),
         limpar(dados.imovel, 40),
         limpar(dados.interesse, 60),
+        limpar(dados.origem, 80),
         requestId,
       ]);
     }

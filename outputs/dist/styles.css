@@ -66,11 +66,11 @@ svg{display:block}
 .lead-panel .button{width:100%;padding:16px;font-size:14px;min-height:52px}
 .lead-panel .button:disabled{cursor:wait;background:#f3bd96;color:#4b3526}
 .form-trap{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
-#form-status:not(:empty){margin-top:14px;font-size:14px;font-weight:600;line-height:1.5}
-#form-status[data-state='error']{color:#a02822}
-#form-status[data-state='success']{color:#245732}
-#whatsapp-continue{display:block;font-weight:700;font-size:14px;margin-top:12px}
-#whatsapp-continue[hidden]{display:none}
+.form-status:not(:empty){margin-top:14px;font-size:14px;font-weight:600;line-height:1.5}
+.form-status[data-state='error']{color:#a02822}
+.form-status[data-state='success']{color:#245732}
+.whatsapp-continue{display:block;font-weight:700;font-size:14px;margin-top:12px}
+.whatsapp-continue[hidden]{display:none}
 
 /* Shared section layout */
 .section{padding-block:100px}
@@ -465,3 +465,13 @@ footer{background:var(--ink);color:#c6c9cb;padding-block:46px 90px}
 .kit-steps p{color:var(--muted);font-size:15px}
 @media(max-width:860px){.kit-head{grid-template-columns:1fr;gap:24px}}
 @media(max-width:760px){.kit-steps{grid-template-columns:1fr;gap:24px;margin:34px 0 30px}.kit .button{width:100%}}
+
+/* Lead popup */
+#lead-modal{border:0;padding:0;background:transparent;width:min(480px,calc(100% - 32px));max-width:none;max-height:calc(100dvh - 32px);overflow:visible;color:var(--ink)}
+#lead-modal::backdrop{background:#0009}
+#lead-modal .lead-panel{max-height:calc(100dvh - 32px);overflow:auto;box-shadow:0 30px 80px #0008;padding-top:44px}
+.modal-close{position:absolute;top:8px;right:8px;z-index:2;width:44px;height:44px;border:0;border-radius:50%;background:transparent;color:var(--ink);font:400 30px/1 Manrope,Arial,sans-serif;cursor:pointer}
+.modal-close:hover{background:var(--alt)}
+.modal-close:focus-visible{outline:3px solid var(--orange-dark);outline-offset:0}
+body:has(#lead-modal[open]){overflow:hidden}
+@media(max-width:760px){#lead-modal .lead-panel{padding:44px 20px 20px}}

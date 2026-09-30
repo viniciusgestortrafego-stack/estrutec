@@ -11,6 +11,6 @@ O formulário do site envia os dados para um endereço configurado em `outputs/d
 5. Envie esse URL para a equipe de desenvolvimento. Ele entra em `outputs/dist/form-config.js`:
    `window.ESTRUTEC_LEAD_ENDPOINT = 'URL_AQUI';`
 
-Cada envio cria uma linha com data, nome, WhatsApp, cidade, tipo de local, interesse e um ID. Se o visitante enviar duas vezes o mesmo cadastro por falha de conexão, a planilha não duplica a linha.
+Todos os botões de orçamento da página abrem um formulário em popup, e ele envia os dados para o mesmo endereço do formulário do topo. Cada envio cria uma linha com data, nome, WhatsApp, cidade, tipo de local, interesse, origem (formulário do topo ou o botão clicado) e um ID. Se o visitante enviar duas vezes o mesmo cadastro por falha de conexão, a planilha não duplica a linha.
 
 Depois de mexer no script, faça uma **nova implantação** (ou gerencie a implantação e escolha "nova versão"), senão o site continua usando a versão antiga.
