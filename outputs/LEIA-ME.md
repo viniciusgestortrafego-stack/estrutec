@@ -24,7 +24,7 @@ O teste verifica o endereço dos links, não a existência ou titularidade da co
 
 Copy baseada nas seções consolidadas da conversa “estrutec”, revisada em 29/09/2026 com o feedback comercial e o documento “Landing Page Vendas V2”. Foto de monitoramento, logotipo horizontal e logos dos clientes obtidos no site institucional https://estrutecmonitoramento.com.br/ em 15/09/2026. O logotipo horizontal oficial foi usado para melhor leitura no cabeçalho; o anexo original está preservado. A foto é uma imagem institucional e não comprova o local físico da central. Não foram inventadas avaliações ou estatísticas.
 
-Fonte Manrope distribuída sob SIL Open Font License; licença incluída nos assets.
+Fonte Barlow distribuída sob SIL Open Font License; licença incluída nos assets (OFL-Barlow.txt).
 
 ## Verificações
 
