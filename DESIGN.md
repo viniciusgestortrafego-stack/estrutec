@@ -11,10 +11,10 @@ Premium, restrained landing page in Brazilian Portuguese. The user-pinned palett
 
 ## Tokens
 - Ink: #111315. Dark section: #1c2023.
-- Brand orange: #f29631 (fills, borders, icons, large headlines). Dark orange of the same hue for small text on pale surfaces: #a35a0a.
+- Brand orange: #e35300, sampled from the Estrutec smart pole artwork (fills, borders, icons, large headlines). Darker shade of the same hue for small text on pale surfaces: #bd4500.
 - Paper: #ffffff. Alternate surface: #f1f2f2.
 - Secondary text: #555b60. Rules: #dfe1e2; dark rules: #343739.
-- Self-hosted Barlow weights 400–800 with Arial/sans-serif fallback. Display sizes are fluid, headings use balanced wrapping and -0.035em letter spacing.
+- Self-hosted Barlow Condensed (headlines, buttons, labels; weights 500–800) and Barlow (body copy; weights 400–800) with Arial/sans-serif fallback. Display sizes are fluid, headings use balanced wrapping and -0.035em letter spacing.
 - Content container: 1280px maximum, 48px desktop side padding; 22px mobile side padding.
 - Section vertical spacing: 105px desktop, 80px intermediate, 65px mobile.
 - Buttons: bold dark text on orange, 3px corner radius, 54px minimum height; compact header action has a 44px mobile minimum.
