@@ -478,9 +478,5 @@ body:has(#lead-modal[open]){overflow:hidden}
 
 /* Section order changed: keep light and dark bands alternating. */
 .pole{background:var(--paper)}
-.why{background:var(--paper);color:var(--ink)}
-.why .section-intro h2 span{color:var(--orange-dark)}
-.why .section-intro p{color:var(--muted)}
-.why-grid li{border-top-color:var(--line)}
-.why-grid li:before{color:var(--orange-dark)}
-.why-grid p{color:var(--muted)}
+
+.clients-section .clients{margin-top:0;border-top:0;padding-top:0}
