@@ -549,3 +549,8 @@ h3{font-size:1.4rem}
 
 .services article:nth-child(4) .service-thumb{object-position:center}
 @media(max-width:760px){.services article:nth-child(4) .service-thumb{object-position:78% center}}
+
+/* Two remaining icon items: split the row evenly. */
+.tech-list{grid-template-columns:repeat(2,1fr);gap:0 38px}
+.tech-list p{font-size:15px;max-width:44ch}
+@media(max-width:760px){.tech-list{grid-template-columns:1fr}}
