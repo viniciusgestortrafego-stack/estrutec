@@ -546,3 +546,6 @@ h3{font-size:1.4rem}
 .lead-panel .lead-submit:hover{background:#1ebe5b}
 .lead-panel .lead-submit:disabled{background:#9be3b8;color:#000}
 .lead-panel .lead-submit:focus-visible{outline-color:#000}
+
+.services article:nth-child(4) .service-thumb{object-position:center}
+@media(max-width:760px){.services article:nth-child(4) .service-thumb{object-position:78% center}}
