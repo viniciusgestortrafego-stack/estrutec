@@ -507,3 +507,6 @@ h3{font-size:1.4rem}
 .hero-facts .stack li{font-size:17px}
 .trust-strip{font-size:17px}
 @media(max-width:760px){.hero h1{font-size:clamp(2.7rem,13vw,3.8rem);max-width:none}.hero-facts .stack li{font-size:15px}.trust-strip{font-size:16px}}
+
+.services article:nth-child(1) .service-thumb{object-position:62% 50%}
+@media(max-width:760px){.services article:nth-child(1) .service-thumb{object-position:70% 50%}}
