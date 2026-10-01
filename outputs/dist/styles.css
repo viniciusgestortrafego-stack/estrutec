@@ -522,3 +522,15 @@ h3{font-size:1.4rem}
 
 .services article:nth-child(3) .service-thumb{object-position:center}
 @media(max-width:760px){.services article:nth-child(3) .service-thumb{object-position:99% center}}
+
+/* Electric fence section */
+.fence-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:70px;align-items:center}
+.fence-photo{border-radius:4px;overflow:hidden;aspect-ratio:16/9;width:100%}
+.fence-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.fence-copy h2{font-size:clamp(2rem,3.6vw,3.2rem);font-weight:800;text-transform:uppercase;line-height:1.05}
+.fence-copy h2 span{color:var(--orange)}
+.fence-copy p{color:var(--muted);font-size:17px;margin-top:18px}
+.fence-copy .fence-lead{color:var(--ink);font-weight:600;font-size:19px;margin-top:22px}
+.fence-copy .button{margin-top:30px}
+@media(max-width:860px){.fence-grid{grid-template-columns:1fr;gap:34px}}
+@media(max-width:760px){.fence-copy .button{width:100%}}
