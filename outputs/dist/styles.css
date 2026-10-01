@@ -534,3 +534,7 @@ h3{font-size:1.4rem}
 .fence-copy .button{margin-top:30px}
 @media(max-width:860px){.fence-grid{grid-template-columns:1fr;gap:34px}}
 @media(max-width:760px){.fence-copy .button{width:100%}}
+
+/* Fence now sits above the kit section: keep the bands alternating. */
+.fence{background:var(--alt)}
+.kit{background:var(--paper)}
