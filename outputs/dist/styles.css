@@ -508,3 +508,6 @@ h3{font-size:1.4rem}
 @media(max-width:1050px){.services article:nth-child(2) .service-thumb{object-position:center 100%}}
 @media(max-width:760px){.services article:nth-child(2) .service-thumb{object-position:center 80%}}
 
+
+/* Keep the photo labels clear of the centered logo on narrow phones. */
+@media(max-width:420px){.night-tag{font-size:9px;letter-spacing:0;padding:5px 6px;bottom:8px}.night-tag.left{left:8px}.night-tag.right{right:8px}}
