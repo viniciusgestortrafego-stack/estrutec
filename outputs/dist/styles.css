@@ -215,9 +215,9 @@ details[open] summary:after{content:"−"}
 .final-cta .button:focus-visible{outline-color:var(--ink);outline-offset:5px}
 
 /* Floating WhatsApp */
-.whatsapp-float{position:fixed;right:22px;bottom:22px;z-index:30;display:flex;align-items:center;gap:10px;background:var(--orange);color:#000;text-decoration:none;font-weight:800;font-size:14px;padding:13px 18px 13px 14px;border-radius:40px;box-shadow:0 10px 28px #0005;transition:transform .18s}
+.whatsapp-float{position:fixed;right:22px;bottom:22px;z-index:30;display:flex;align-items:center;gap:10px;background:#25d366;color:#fff;text-decoration:none;font-weight:800;font-size:14px;padding:13px 18px 13px 14px;border-radius:40px;box-shadow:0 10px 28px #0005;transition:transform .18s}
 .whatsapp-float:hover{transform:translateY(-2px)}
-.whatsapp-float svg{width:26px;height:26px;fill:#000}
+.whatsapp-float svg{width:26px;height:26px;fill:#fff}
 .whatsapp-float:focus-visible{outline-color:var(--ink)}
 
 /* Footer */
@@ -538,3 +538,11 @@ h3{font-size:1.4rem}
 /* Fence now sits above the kit section: keep the bands alternating. */
 .fence{background:var(--alt)}
 .kit{background:var(--paper)}
+
+/* WhatsApp green on the floating button and the lead form submit button. */
+.whatsapp-float:hover{background:#1ebe5b}
+.whatsapp-float:focus-visible{outline-color:#000}
+.lead-panel .lead-submit{background:#25d366;color:#fff}
+.lead-panel .lead-submit:hover{background:#1ebe5b}
+.lead-panel .lead-submit:disabled{background:#9be3b8;color:#000}
+.lead-panel .lead-submit:focus-visible{outline-color:#000}
