@@ -510,3 +510,5 @@ h3{font-size:1.4rem}
 
 .services article:nth-child(1) .service-thumb{object-position:62% 50%}
 @media(max-width:760px){.services article:nth-child(1) .service-thumb{object-position:70% 50%}}
+
+.services article:nth-child(2) .service-thumb{object-position:center 50%}
