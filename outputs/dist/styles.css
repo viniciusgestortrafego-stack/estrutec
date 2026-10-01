@@ -514,3 +514,8 @@ h3{font-size:1.4rem}
 
 .services article:nth-child(4) .service-thumb{object-position:center 18%}
 @media(max-width:760px){.services article:nth-child(4) .service-thumb{object-position:center}}
+
+/* Portrait CFTV image: show it whole, logo included. */
+.cftv-photo{aspect-ratio:2/3;max-width:460px}
+.cftv-grid{grid-template-columns:minmax(0,1fr) minmax(0,460px)}
+@media(max-width:860px){.cftv-grid{grid-template-columns:1fr}.cftv-photo{max-width:420px;justify-self:center}}
