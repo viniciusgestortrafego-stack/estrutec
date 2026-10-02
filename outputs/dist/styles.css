@@ -615,3 +615,12 @@ h3{font-size:1.4rem}
 .client-logos img[alt^="Inkcor"]{width:auto;height:auto;max-width:100px;max-height:86px;margin:auto}
 
 .strategy h2{font-size:clamp(2rem,4.2vw,3.8rem);max-width:24ch}
+
+/* Smart pole: what it is and benefits. */
+.pole-copy>h3.pole-q{font-family:var(--display);font-size:1.5rem;text-transform:uppercase;margin:30px 0 10px}
+.pole-copy>h3.pole-q+p{margin-top:0}
+.benefit-list{list-style:none;padding:0;display:grid;gap:14px}
+.benefit-list li{position:relative;padding-left:28px;font-size:16px;line-height:1.5;color:var(--muted)}
+.benefit-list li:before{content:"";position:absolute;left:0;top:6px;width:14px;height:14px;border-radius:50%;background:var(--orange)}
+.benefit-list strong{color:var(--ink);font-weight:700}
+.pole-copy>h3.pole-q+p+p{margin-top:14px}
