@@ -560,3 +560,11 @@ h3{font-size:1.4rem}
 .tech-list h3 .kw{display:block;font-size:1.1rem;font-weight:600;color:var(--orange);margin-top:2px}
 @media(max-width:1050px){.tech-list{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:760px){.tech-list{grid-template-columns:1fr}}
+
+/* Public security programs highlight in the smart pole section. */
+.pole-gov{margin:26px 0 0;padding:22px 24px;border:2px solid var(--ink);border-radius:4px;background:#fff}
+.pole-copy .pole-gov>h3{margin:0 0 6px;font-size:1.25rem;text-transform:uppercase}
+.pole-gov p{font-size:15px;margin:0 0 14px;color:var(--muted)}
+.gov-list{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.gov-list li{font-family:var(--display);font-weight:800;font-size:1.25rem;letter-spacing:.02em;text-transform:uppercase;padding:8px 16px;border-radius:3px;background:var(--ink);color:#fff;border-bottom:4px solid var(--orange)}
+@media(max-width:760px){.pole-gov{padding:18px}.gov-list li{font-size:1.1rem;padding:7px 12px}}
