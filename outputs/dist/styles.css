@@ -581,3 +581,7 @@ h3{font-size:1.4rem}
 @media(max-width:760px){.tech-list .tech-photo{height:200px;object-position:center 75%}}
 .tech-list .tech-photo{height:auto;aspect-ratio:1/1;object-position:center}
 @media(max-width:760px){.tech-list .tech-photo{height:auto;aspect-ratio:1/1;max-width:420px;object-position:center}}
+
+/* The panic button photo is landscape: show it whole. */
+.tech-list .tech-photo-wide{aspect-ratio:16/9}
+@media(max-width:760px){.tech-list .tech-photo-wide{max-width:none}}
