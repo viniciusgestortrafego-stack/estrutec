@@ -554,3 +554,9 @@ h3{font-size:1.4rem}
 .tech-list{grid-template-columns:repeat(2,1fr);gap:0 38px}
 .tech-list p{font-size:15px;max-width:44ch}
 @media(max-width:760px){.tech-list{grid-template-columns:1fr}}
+
+/* Three icon items in one row. */
+.tech-list{grid-template-columns:repeat(3,1fr);gap:0 38px}
+.tech-list h3 .kw{display:block;font-size:1.1rem;font-weight:600;color:var(--orange);margin-top:2px}
+@media(max-width:1050px){.tech-list{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.tech-list{grid-template-columns:1fr}}
