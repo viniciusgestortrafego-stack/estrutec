@@ -613,3 +613,5 @@ h3{font-size:1.4rem}
 @media(max-width:760px){.client-logos{grid-template-columns:1fr 1fr}}
 /* The Inkcor file is tiny (90x77px): keep it near its native size so it stays sharp. */
 .client-logos img[alt^="Inkcor"]{width:auto;height:auto;max-width:100px;max-height:86px;margin:auto}
+
+.strategy h2{font-size:clamp(2rem,4.2vw,3.8rem);max-width:24ch}
