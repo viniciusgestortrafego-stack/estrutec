@@ -651,3 +651,8 @@ h3{font-size:1.4rem}
 .gov-logos img{width:100%;height:100%;object-fit:contain;display:block}
 .gov-logos li:first-child img{object-fit:cover}
 @media(max-width:760px){.gov-logos{grid-template-columns:1fr 1fr;gap:10px}.gov-logos li:last-child{grid-column:1/-1;aspect-ratio:3/1.3}}
+
+/* Full Color highlight inside the night vision section. */
+.night-fc{margin:0 0 26px;padding:18px 20px;border-left:4px solid var(--orange);background:#121212}
+.night-copy .night-fc h3{font-family:var(--display);font-size:1.35rem;text-transform:uppercase;color:var(--orange);margin-bottom:6px}
+.night-copy .night-fc p{margin:0;font-size:16px;color:#e4e4e4}
