@@ -637,3 +637,10 @@ h3{font-size:1.4rem}
 .gate-copy .button{margin-top:28px}
 @media(max-width:860px){.gate-grid{grid-template-columns:1fr;gap:34px}}
 @media(max-width:760px){.gate-copy .button{width:100%}}
+
+/* Fence section on black: the orange title and white text read clearly. */
+.fence{background:var(--ink);color:#fff}
+.fence-copy h2{color:#fff}
+.fence-copy h2 span{color:var(--orange)}
+.fence-copy p{color:#d6d6d6}
+.fence-copy .fence-lead{color:#fff}
