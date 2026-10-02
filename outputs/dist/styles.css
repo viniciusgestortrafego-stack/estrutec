@@ -1,4 +1,4 @@
-:root{--ink:#000000;--dark:#121212;--muted:#595959;--orange:#ff914a;--paper:#fff;--alt:#f3f3f3;--line:#e0e0e0;--darkline:#2e2e2e}
+:root{--ink:#000000;--dark:#121212;--muted:#595959;--orange:#f68e4f;--paper:#fff;--alt:#f3f3f3;--line:#e0e0e0;--darkline:#2e2e2e}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:100px}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:Barlow,Arial,sans-serif;font-size:16px;line-height:1.65}
@@ -26,7 +26,7 @@ svg{display:block}
 
 /* Buttons and links */
 .button{display:inline-flex;align-items:center;justify-content:space-between;gap:26px;background:var(--orange);color:#000000;text-decoration:none;padding:18px 24px;border-radius:3px;font-weight:800;font-size:15px;line-height:1.4;min-height:54px;transition:background .18s,transform .18s;font-family:inherit;border:0;cursor:pointer}
-.button:hover{background:#ffa56b}
+.button:hover{background:#f8a572}
 .button span,.text-link span{font-size:22px;line-height:1}
 .button.small{padding:13px 18px;min-height:46px;font-size:14px;white-space:nowrap}
 .button.dark{background:var(--ink);color:#fff}.button.dark:hover{background:#2a2a2a}
@@ -64,7 +64,7 @@ svg{display:block}
 .form-fields input:focus,.form-fields select:focus{outline:2px solid var(--ink);outline-offset:2px}
 .form-privacy{font-size:12px;line-height:1.55;color:#606060;margin:14px 0}
 .lead-panel .button{width:100%;padding:16px;font-size:14px;min-height:52px}
-.lead-panel .button:disabled{cursor:wait;background:#ffd2b3;color:#000000}
+.lead-panel .button:disabled{cursor:wait;background:#fbd2b9;color:#000000}
 .form-trap{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 .form-status:not(:empty){margin-top:14px;font-size:14px;font-weight:600;line-height:1.5}
 .form-status[data-state='error']{color:#000;border-left:3px solid var(--orange);padding-left:10px}
@@ -103,7 +103,7 @@ svg{display:block}
 .ai-band h3{font-size:1.6rem;margin-bottom:10px}
 .ai-band p{color:#c7c7c7;font-size:15px}
 .ai-band .text-link{flex:none;color:var(--orange)}
-.ai-band .text-link:hover{color:#ffa56b}
+.ai-band .text-link:hover{color:#f8a572}
 
 /* Problem */
 .problem h2 span,.process h2 span,.faq h2 span{color:#787878}
@@ -153,7 +153,7 @@ svg{display:block}
 .check-list li{position:relative;padding-left:28px;font-size:15px;line-height:1.45}
 .check-list li:before{content:"";position:absolute;left:0;top:3px;width:16px;height:16px;border-radius:50%;background:var(--orange)}
 .check-list li:after{content:"";position:absolute;left:5px;top:7px;width:6px;height:3px;border-left:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:rotate(-45deg)}
-.pole-copy .pole-note{margin:26px 0;padding:18px 20px;background:var(--dark);color:#ffd0b0;font-weight:600;font-size:15px;border-radius:4px;max-width:none}
+.pole-copy .pole-note{margin:26px 0;padding:18px 20px;background:var(--dark);color:#fbd2b9;font-weight:600;font-size:15px;border-radius:4px;max-width:none}
 
 /* Strategy */
 .strategy{background:var(--ink);color:#fff;position:relative;overflow:hidden}
