@@ -575,3 +575,9 @@ h3{font-size:1.4rem}
 .client-logos img{width:100%;height:100%;max-width:none;object-fit:contain;filter:none}
 .clients-section .google-reviews{margin-top:56px;padding-top:44px;border-top:1px solid #d0d0d0}
 @media(max-width:760px){.client-logos{grid-template-columns:1fr 1fr;gap:12px}.client-logos img{height:100%}.clients-section .google-reviews{margin-top:40px;padding-top:32px}}
+
+/* Photo in place of the icon for the perimeter protection item. */
+.tech-list .tech-photo{display:block;width:100%;height:230px;object-fit:cover;object-position:center 70%;border-radius:4px;margin-bottom:18px}
+@media(max-width:760px){.tech-list .tech-photo{height:200px;object-position:center 75%}}
+.tech-list .tech-photo{height:auto;aspect-ratio:1/1;object-position:center}
+@media(max-width:760px){.tech-list .tech-photo{height:auto;aspect-ratio:1/1;max-width:420px;object-position:center}}
