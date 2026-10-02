@@ -11,7 +11,7 @@ Premium, restrained landing page in Brazilian Portuguese. The user-pinned palett
 
 ## Tokens
 - Ink: #111315. Dark section: #1c2023.
-- Palette taken from the Estrutec logo: black (#000000), white, neutral grays and a single orange, #f68e4f, chosen by the client. The orange is used for fills, borders, icons and large headlines; text on light surfaces stays black or gray. No other hues (exception: the floating WhatsApp button and the lead form submit button use WhatsApp green, #25d366).
+- Palette taken from the Estrutec logo: black (#000000), white, neutral grays and a single orange, #a76d4e, chosen by the client (#a76d4e). The orange is used for fills, borders, icons and large headlines; text on light surfaces stays black or gray. No other hues (exception: the floating WhatsApp button and the lead form submit button use WhatsApp green, #25d366).
 - Paper: #ffffff. Alternate surface: #f1f2f2.
 - Secondary text: #555b60. Rules: #dfe1e2; dark rules: #343739.
 - Self-hosted Barlow Condensed (headlines, buttons, labels; weights 500–800) and Barlow (body copy; weights 400–800) with Arial/sans-serif fallback. Display sizes are fluid, headings use balanced wrapping and -0.035em letter spacing.
