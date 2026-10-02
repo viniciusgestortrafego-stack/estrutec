@@ -594,3 +594,5 @@ h3{font-size:1.4rem}
 
 .tech-list li:nth-child(3) .tech-photo{object-position:100% 50%}
 @media(min-width:761px) and (max-width:1050px){.tech-list{grid-template-columns:repeat(3,1fr);gap:0 20px}.tech-list p{font-size:14px}}
+
+.tech-list h3 .kw{display:inline;font-size:inherit;margin:0}
