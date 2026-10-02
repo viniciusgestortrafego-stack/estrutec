@@ -585,3 +585,9 @@ h3{font-size:1.4rem}
 /* The panic button photo is landscape: show it whole. */
 .tech-list .tech-photo-wide{aspect-ratio:16/9}
 @media(max-width:760px){.tech-list .tech-photo-wide{max-width:none}}
+
+/* Both photos share one 16:10 frame; crops keep the Estrutec logo in view. */
+.tech-list .tech-photo,.tech-list .tech-photo-wide{aspect-ratio:16/10;height:auto;max-width:none;object-fit:cover}
+.tech-list .tech-photo-wide{object-position:100% 50%}
+.tech-list li:nth-child(2) .tech-photo{object-position:50% 100%}
+@media(max-width:760px){.tech-list .tech-photo,.tech-list .tech-photo-wide{max-width:none}}
