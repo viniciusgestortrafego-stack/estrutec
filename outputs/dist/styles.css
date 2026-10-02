@@ -598,3 +598,13 @@ h3{font-size:1.4rem}
 .tech-list h3 .kw{display:inline;font-size:inherit;margin:0}
 
 .benefits[hidden]{display:none!important}
+
+/* Phone emphasis. */
+.footer-contacts a.footer-phone{display:flex;align-items:center;gap:12px;color:var(--orange);font-family:var(--display);font-weight:800;font-size:1.9rem;line-height:1.05;margin:6px 0}
+.footer-phone svg{width:30px;height:30px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.footer-phone small{display:block;font-family:Barlow,Arial,sans-serif;font-weight:600;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:#c7c7c7;margin-bottom:2px}
+.footer-contacts a.footer-phone:hover{color:#fff}
+.button.phone-btn{background:#fff;color:#000;justify-content:center;gap:10px}
+.button.phone-btn:hover{background:var(--orange)}
+.button.phone-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+@media(max-width:760px){.footer-contacts a.footer-phone{min-height:56px;font-size:2rem}.location .button.phone-btn{width:100%}}
