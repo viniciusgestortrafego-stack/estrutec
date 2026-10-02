@@ -644,3 +644,10 @@ h3{font-size:1.4rem}
 .fence-copy h2 span{color:var(--orange)}
 .fence-copy p{color:#d6d6d6}
 .fence-copy .fence-lead{color:#fff}
+
+/* Logos of the public security programs. */
+.gov-logos{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.gov-logos li{aspect-ratio:3/2;border:1px solid #d0d0d0;border-radius:4px;overflow:hidden;background:#fff;display:flex;align-items:center;justify-content:center}
+.gov-logos img{width:100%;height:100%;object-fit:contain;display:block}
+.gov-logos li:first-child img{object-fit:cover}
+@media(max-width:760px){.gov-logos{grid-template-columns:1fr 1fr;gap:10px}.gov-logos li:last-child{grid-column:1/-1;aspect-ratio:3/1.3}}
