@@ -608,3 +608,8 @@ h3{font-size:1.4rem}
 .button.phone-btn:hover{background:var(--orange)}
 .button.phone-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
 @media(max-width:760px){.footer-contacts a.footer-phone{min-height:56px;font-size:2rem}.location .button.phone-btn{width:100%}}
+
+.client-logos{grid-template-columns:repeat(3,1fr)}
+@media(max-width:760px){.client-logos{grid-template-columns:1fr 1fr}}
+/* The Inkcor file is tiny (90x77px): keep it near its native size so it stays sharp. */
+.client-logos img[alt^="Inkcor"]{width:auto;height:auto;max-width:100px;max-height:86px;margin:auto}
