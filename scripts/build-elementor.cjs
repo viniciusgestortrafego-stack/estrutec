@@ -39,6 +39,10 @@ ${WRAP} li,${WRAP} address{font-size:inherit}
 `;
 const minify = c => c.replace(/\/\*[\s\S]*?\*\//g, '').replace(/\s+/g, ' ').replace(/\s*([{};,>])\s*/g, '$1').replace(/;}/g, '}').trim();
 const btn = `${WRAP} .button{text-decoration:none!important;box-shadow:none!important}`;
+// Only on pages that contain the landing page: hide the theme's own header/footer (the page brings its own).
+const OUT = ':not(#estrutec-lp):not(#estrutec-lp *)';
+const hideTheme = ['header', 'footer', '#masthead', '#colophon', '.elementor-location-header', '.elementor-location-footer', '[data-elementor-type="header"]', '[data-elementor-type="footer"]', '.site-header', '.site-footer', '.page-header', '.entry-header']
+  .map(x => `body:has(#estrutec-lp) ${x}${OUT}`).join(',') + '{display:none!important}body:has(#estrutec-lp) .site-content,body:has(#estrutec-lp) .entry-content,body:has(#estrutec-lp) main{margin-top:0!important;padding-top:0!important}';
 let body = fs.readFileSync(path.join(dist, 'index.html'), 'utf8');
 body = body.slice(body.indexOf('<body>') + 6, body.indexOf('</body>'));
 body = body.replace(/<!-- Google Tag Manager \(noscript\) -->[\s\S]*?<!-- End Google Tag Manager \(noscript\) -->/, '');
@@ -54,7 +58,7 @@ const html = `<!--
   Cole este arquivo inteiro em um widget HTML do Elementor. As imagens, fontes e o video sao carregados de ${BASE}/assets/.
   O Google Tag Manager (GTM-5DLHWFCJ) ja esta incluido no fim deste codigo.
 -->
-<style>${minify(scoped + guard + btn)}</style>
+<style>${minify(scoped + guard + btn + hideTheme)}</style>
 <div id="estrutec-lp">
 ${body.trim()}
 </div>
