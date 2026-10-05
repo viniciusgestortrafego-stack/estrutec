@@ -42,7 +42,7 @@ const btn = `${WRAP} .button{text-decoration:none!important;box-shadow:none!impo
 // Only on pages that contain the landing page: hide the theme's own header/footer (the page brings its own).
 const OUT = ':not(#estrutec-lp):not(#estrutec-lp *)';
 const hideTheme = ['header', 'footer', '#masthead', '#colophon', '.elementor-location-header', '.elementor-location-footer', '[data-elementor-type="header"]', '[data-elementor-type="footer"]', '.site-header', '.site-footer', '.page-header', '.entry-header']
-  .map(x => `body:has(#estrutec-lp) ${x}${OUT}`).join(',') + '{display:none!important}body:has(#estrutec-lp) .site-content,body:has(#estrutec-lp) .entry-content,body:has(#estrutec-lp) main{margin-top:0!important;padding-top:0!important}';
+  .map(x => `body:has(#estrutec-lp) ${x}${OUT}`).join(',') + '{display:none!important}body:has(#estrutec-lp)::before,body:has(#estrutec-lp)::after{display:none!important}body:has(#estrutec-lp) .site-content,body:has(#estrutec-lp) .entry-content,body:has(#estrutec-lp) main{margin-top:0!important;padding-top:0!important}';
 let body = fs.readFileSync(path.join(dist, 'index.html'), 'utf8');
 body = body.slice(body.indexOf('<body>') + 6, body.indexOf('</body>'));
 body = body.replace(/<!-- Google Tag Manager \(noscript\) -->[\s\S]*?<!-- End Google Tag Manager \(noscript\) -->/, '');
@@ -87,7 +87,10 @@ function estrutecPurge() {
   for (var n = w; n && n !== document.documentElement; n = n.parentNode) {
     var sib = n.parentNode ? n.parentNode.children : [];
     for (var i = 0; i < sib.length; i++) if (sib[i] !== n) hide(sib[i]);
+    if (n !== w) ['paddingTop', 'paddingBottom', 'marginTop', 'marginBottom', 'minHeight', 'borderTopWidth', 'borderBottomWidth'].forEach(function (k) { n.style.setProperty(k.replace(/[A-Z]/g, function (c) { return '-' + c.toLowerCase(); }), '0', 'important'); });
   }
+  document.documentElement.style.setProperty('margin-top', '0', 'important');
+  document.documentElement.style.setProperty('padding-top', '0', 'important');
   var all = document.body.getElementsByTagName('*');
   for (var j = 0; j < all.length; j++) {
     var e = all[j];
