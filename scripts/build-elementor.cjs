@@ -37,9 +37,12 @@ ${WRAP} a{box-shadow:none}
 ${WRAP} p{margin-bottom:0;font-size:inherit}
 ${WRAP} li,${WRAP} address{font-size:inherit}
 `;
+const minify = c => c.replace(/\/\*[\s\S]*?\*\//g, '').replace(/\s+/g, ' ').replace(/\s*([{};,>])\s*/g, '$1').replace(/;}/g, '}').trim();
+const btn = `${WRAP} .button{text-decoration:none!important;box-shadow:none!important}`;
 let body = fs.readFileSync(path.join(dist, 'index.html'), 'utf8');
 body = body.slice(body.indexOf('<body>') + 6, body.indexOf('</body>'));
 body = body.replace(/<!-- Google Tag Manager \(noscript\) -->[\s\S]*?<!-- End Google Tag Manager \(noscript\) -->/, '');
+body = body.replace(/\n\s*\n+/g, '\n').replace(/^[ \t]+$/gm, '');
 body = body.replace(/(src|href|poster)="assets\//g, `$1="${BASE}/assets/`);
 
 const endpoint = fs.readFileSync(path.join(dist, 'form-config.js'), 'utf8');
@@ -49,14 +52,13 @@ js = js.replace('document.body.append(modal);', "(document.getElementById('estru
 const html = `<!--
   Estrutec Monitoramento - landing page para o widget HTML do Elementor.
   Cole este arquivo inteiro em um widget HTML do Elementor. As imagens, fontes e o video sao carregados de ${BASE}/assets/.
-  O codigo do Google Tag Manager (GTM-5DLHWFCJ) NAO esta aqui: instale-o pelo tema, plugin ou Elementor > Custom Code.
+  O Google Tag Manager (GTM-5DLHWFCJ) ja esta incluido no fim deste codigo.
 -->
-<style>
-${scoped}${guard}
-</style>
+<style>${minify(scoped + guard + btn)}</style>
 <div id="estrutec-lp">
 ${body.trim()}
 </div>
+<script>(function(w,d,s,l,i){if(w.google_tag_manager&&w.google_tag_manager[i])return;w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5DLHWFCJ');</script>
 <script>
 (function () {
 ${endpoint}

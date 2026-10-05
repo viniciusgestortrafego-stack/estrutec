@@ -1,754 +1,12 @@
 <!--
   Estrutec Monitoramento - landing page para o widget HTML do Elementor.
   Cole este arquivo inteiro em um widget HTML do Elementor. As imagens, fontes e o video sao carregados de https://cdn.jsdelivr.net/gh/viniciusgestortrafego-stack/estrutec@7f52102d3a68837c69e37e772f532509e68f5ef4/outputs/dist/assets/.
-  O codigo do Google Tag Manager (GTM-5DLHWFCJ) NAO esta aqui: instale-o pelo tema, plugin ou Elementor > Custom Code.
+  O Google Tag Manager (GTM-5DLHWFCJ) ja esta incluido no fim deste codigo.
 -->
-<style>
-@font-face {
-  font-family: 'Barlow';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://cdn.jsdelivr.net/gh/viniciusgestortrafego-stack/estrutec@7f52102d3a68837c69e37e772f532509e68f5ef4/outputs/dist/assets/barlow-400.woff2) format('woff2');
-}
-@font-face {
-  font-family: 'Barlow';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(https://cdn.jsdelivr.net/gh/viniciusgestortrafego-stack/estrutec@7f52102d3a68837c69e37e772f532509e68f5ef4/outputs/dist/assets/barlow-500.woff2) format('woff2');
-}
-@font-face {
-  font-family: 'Barlow';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(https://cdn.jsdelivr.net/gh/viniciusgestortrafego-stack/estrutec@7f52102d3a68837c69e37e772f532509e68f5ef4/outputs/dist/assets/barlow-600.woff2) format('woff2');
-}
-@font-face {
-  font-family: 'Barlow';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://cdn.jsdelivr.net/gh/viniciusgestortrafego-stack/estrutec@7f52102d3a68837c69e37e772f532509e68f5ef4/outputs/dist/assets/barlow-700.woff2) format('woff2');
-}
-@font-face {
-  font-family: 'Barlow';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url(https://cdn.jsdelivr.net/gh/viniciusgestortrafego-stack/estrutec@7f52102d3a68837c69e37e772f532509e68f5ef4/outputs/dist/assets/barlow-800.woff2) format('woff2');
-}
-@font-face {
-  font-family: 'Barlow Condensed';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url(https://cdn.jsdelivr.net/gh/viniciusgestortrafego-stack/estrutec@7f52102d3a68837c69e37e772f532509e68f5ef4/outputs/dist/assets/barlow-condensed-500.woff2) format('woff2');
-}
-@font-face {
-  font-family: 'Barlow Condensed';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(https://cdn.jsdelivr.net/gh/viniciusgestortrafego-stack/estrutec@7f52102d3a68837c69e37e772f532509e68f5ef4/outputs/dist/assets/barlow-condensed-600.woff2) format('woff2');
-}
-@font-face {
-  font-family: 'Barlow Condensed';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://cdn.jsdelivr.net/gh/viniciusgestortrafego-stack/estrutec@7f52102d3a68837c69e37e772f532509e68f5ef4/outputs/dist/assets/barlow-condensed-700.woff2) format('woff2');
-}
-@font-face {
-  font-family: 'Barlow Condensed';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url(https://cdn.jsdelivr.net/gh/viniciusgestortrafego-stack/estrutec@7f52102d3a68837c69e37e772f532509e68f5ef4/outputs/dist/assets/barlow-condensed-800.woff2) format('woff2');
-}
-
-#estrutec-lp{--ink:#000000;--dark:#121212;--muted:#595959;--orange:#cc7f29;--paper:#fff;--alt:#f3f3f3;--line:#e0e0e0;--darkline:#2e2e2e}
-#estrutec-lp, #estrutec-lp *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:100px}
-#estrutec-lp{margin:0;background:var(--paper);color:var(--ink);font-family:Barlow,Arial,sans-serif;font-size:16px;line-height:1.65}
-#estrutec-lp ::selection{background:var(--orange);color:var(--ink)}
-#estrutec-lp a{color:inherit;text-underline-offset:5px}
-#estrutec-lp a:focus-visible,#estrutec-lp summary:focus-visible,#estrutec-lp button:focus-visible{outline:3px solid var(--orange);outline-offset:6px}
-#estrutec-lp h1,#estrutec-lp h2,#estrutec-lp h3,#estrutec-lp p,#estrutec-lp figure,#estrutec-lp ul,#estrutec-lp ol{margin:0}
-#estrutec-lp h1,#estrutec-lp h2,#estrutec-lp h3{line-height:1.13;letter-spacing:-.005em;text-wrap:balance}
-#estrutec-lp p{max-width:67ch}
-#estrutec-lp h2{font-size:clamp(2rem,3.3vw,3rem);font-weight:700}
-#estrutec-lp h3{font-size:1.2rem;line-height:1.35;font-weight:700}
-#estrutec-lp em{font-style:normal;color:var(--orange)}
-#estrutec-lp img{max-width:100%}
-#estrutec-lp svg{display:block}
-#estrutec-lp .wrap{max-width:1280px;padding-inline:48px;margin-inline:auto}
-#estrutec-lp .skip{position:fixed;top:-100px;left:20px;padding:15px;z-index:50;background:#fff;color:#000}#estrutec-lp .skip:focus{top:10px}
-
-/* Header */
-#estrutec-lp .header{background:var(--ink);color:#fff;border-bottom:1px solid var(--darkline);position:sticky;top:0;z-index:20}
-#estrutec-lp .header-inner{min-height:88px;display:flex;align-items:center;gap:30px;justify-content:space-between}
-#estrutec-lp .logo{width:210px;height:auto;display:block}
-#estrutec-lp .header nav{display:flex;gap:24px;font-size:14px}
-#estrutec-lp .header nav a{text-decoration:none;color:#d6d6d6;white-space:nowrap}
-#estrutec-lp .header nav a:hover{color:var(--orange)}
-
-/* Buttons and links */
-#estrutec-lp .button{display:inline-flex;align-items:center;justify-content:space-between;gap:26px;background:var(--orange);color:#000000;text-decoration:none;padding:18px 24px;border-radius:3px;font-weight:800;font-size:15px;line-height:1.4;min-height:54px;transition:background .18s,transform .18s;font-family:inherit;border:0;cursor:pointer}
-#estrutec-lp .button:hover{background:#d59650}
-#estrutec-lp .button span,#estrutec-lp .text-link span{font-size:22px;line-height:1}
-#estrutec-lp .button.small{padding:13px 18px;min-height:46px;font-size:14px;white-space:nowrap}
-#estrutec-lp .button.dark{background:var(--ink);color:#fff}#estrutec-lp .button.dark:hover{background:#2a2a2a}
-#estrutec-lp .text-link{font-weight:800;text-decoration:none;display:inline-flex;align-items:center;gap:26px;font-size:15px;padding-block:12px;border-bottom:1px solid currentColor}
-#estrutec-lp .text-link:hover{border-bottom-color:var(--orange)}
-
-/* Hero */
-#estrutec-lp .hero{position:relative;background:var(--ink);color:#fff;overflow:hidden;isolation:isolate}
-#estrutec-lp .hero-bg{position:absolute;inset:0 0 0 auto;width:62%;z-index:-1}
-#estrutec-lp .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:60% 30%;filter:grayscale(55%) contrast(1.05)}
-#estrutec-lp .hero-bg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--ink) 0%,rgba(0,0,0,.88) 30%,rgba(0,0,0,.55) 70%,rgba(0,0,0,.7) 100%),linear-gradient(0deg,var(--ink) 0%,transparent 35%)}
-#estrutec-lp .hero:before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--orange)}
-#estrutec-lp .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;padding-block:72px 56px;align-items:center}
-#estrutec-lp .hero h1{font-size:clamp(2.7rem,5.2vw,4.9rem);font-weight:800;line-height:1.02;letter-spacing:-.005em;text-transform:uppercase;max-width:13ch}
-#estrutec-lp .hero h1 em{display:block}
-#estrutec-lp .hero-lead{color:#d3d3d3;font-size:clamp(1.05rem,1.4vw,1.25rem);line-height:1.55;margin:26px 0 24px;max-width:48ch}
-#estrutec-lp .stack{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px 0;align-items:center;margin-bottom:28px}
-#estrutec-lp .stack li{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:8px 12px;border:1px solid #ffffff33;border-radius:3px;background:#ffffff0d}
-#estrutec-lp .stack li+li{margin-left:26px;position:relative}
-#estrutec-lp .stack li+li:after{content:"+";position:absolute;left:-18px;top:50%;transform:translateY(-52%);color:var(--orange);font-size:18px;font-weight:800}
-#estrutec-lp .hero-cta-text{font-size:16px;font-weight:600;color:#fff;margin-bottom:16px;max-width:44ch}
-#estrutec-lp .trust-strip{display:grid;grid-template-columns:repeat(4,1fr);padding-block:24px;border-top:1px solid var(--darkline);color:#c2c2c2;font-size:14px}
-#estrutec-lp .trust-strip span+span{border-left:1px solid var(--darkline);padding-left:28px}
-#estrutec-lp .trust-strip strong{color:var(--orange);font-weight:700}
-
-/* Lead form */
-#estrutec-lp .lead-panel{background:#fff;color:var(--ink);border-radius:4px;padding:30px;box-shadow:0 24px 60px #0007;border-top:4px solid var(--orange);scroll-margin-top:110px}
-#estrutec-lp .lead-panel h2{font-size:1.65rem;line-height:1.18;font-weight:800}
-#estrutec-lp .lead-panel>p{font-size:14px;color:var(--muted);margin:8px 0 18px}
-#estrutec-lp .form-fields{display:grid;grid-template-columns:1fr 1fr;gap:13px}
-#estrutec-lp .form-fields label{display:flex;flex-direction:column;gap:6px;font-weight:700;font-size:13px}
-#estrutec-lp .form-fields label:first-child,#estrutec-lp .form-fields label:nth-child(2),#estrutec-lp .form-fields label.wide{grid-column:1/-1}
-#estrutec-lp .form-fields input,#estrutec-lp .form-fields select{width:100%;min-width:0;font:400 16px Barlow,Arial,sans-serif;color:var(--ink);background:#fafafa;border:1px solid #adadad;border-radius:3px;padding:10px 12px;min-height:46px;caret-color:var(--ink)}
-#estrutec-lp .form-fields input::placeholder{color:#707070;font-size:14px}
-#estrutec-lp .form-fields input:focus,#estrutec-lp .form-fields select:focus{outline:2px solid var(--ink);outline-offset:2px}
-#estrutec-lp .form-privacy{font-size:12px;line-height:1.55;color:#606060;margin:14px 0}
-#estrutec-lp .lead-panel .button{width:100%;padding:16px;font-size:14px;min-height:52px}
-#estrutec-lp .lead-panel .button:disabled{cursor:wait;background:#edd2b4;color:#000000}
-#estrutec-lp .form-trap{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
-#estrutec-lp .form-status:not(:empty){margin-top:14px;font-size:14px;font-weight:600;line-height:1.5}
-#estrutec-lp .form-status[data-state='error']{color:#000;border-left:3px solid var(--orange);padding-left:10px}
-#estrutec-lp .form-status[data-state='success']{color:#000;border-left:3px solid #000;padding-left:10px}
-#estrutec-lp .whatsapp-continue{display:block;font-weight:700;font-size:14px;margin-top:12px}
-#estrutec-lp .whatsapp-continue[hidden]{display:none}
-
-/* Shared section layout */
-#estrutec-lp .section{padding-block:100px}
-#estrutec-lp .split{display:grid;grid-template-columns:1fr 1fr;gap:45px 95px}
-#estrutec-lp .section-intro{display:flex;align-items:flex-end;justify-content:space-between;gap:70px}
-#estrutec-lp .section-intro h2{flex:1.3}
-#estrutec-lp .section-intro h2 span{color:var(--orange)}
-#estrutec-lp .section-intro p{flex:1;color:var(--muted)}
-
-/* Benefits */
-#estrutec-lp .benefit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0 38px;margin-top:55px}
-#estrutec-lp .benefit-grid article{border-top:1px solid var(--line);padding:30px 0 34px}
-#estrutec-lp .benefit-grid svg,#estrutec-lp .tech-list svg{width:40px;height:40px;fill:none;stroke:var(--orange);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;margin-bottom:20px}
-#estrutec-lp .benefit-grid h3{text-transform:uppercase;letter-spacing:.01em;font-size:1.1rem;margin-bottom:10px}
-#estrutec-lp .benefit-grid p{color:var(--muted);font-size:15px;max-width:34ch}
-
-/* Technologies */
-#estrutec-lp .solutions{background:var(--alt)}
-#estrutec-lp .services{display:grid;grid-template-columns:repeat(3,1fr);gap:0 38px;margin-top:55px}
-#estrutec-lp .services article{border-top:1px solid #d0d0d0;padding-block:30px}
-#estrutec-lp .service-thumb{display:block;width:100%;height:230px;object-fit:cover;object-position:center 40%;border-radius:4px;margin-bottom:22px;filter:saturate(.82) contrast(1.03)}
-#estrutec-lp .services h3{max-width:24ch;margin-bottom:10px}
-#estrutec-lp .services p{color:var(--muted);font-size:15px}
-#estrutec-lp .tech-list{list-style:none;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0 30px;margin-top:40px}
-#estrutec-lp .tech-list li{border-top:1px solid #d0d0d0;padding-top:26px}
-#estrutec-lp .tech-list svg{width:34px;height:34px;margin-bottom:16px}
-#estrutec-lp .tech-list h3{font-size:1.05rem;margin-bottom:8px}
-#estrutec-lp .tech-list p{color:var(--muted);font-size:14px}
-#estrutec-lp .ai-band{margin-top:50px;padding:34px 38px;background:var(--dark);color:#fff;border-radius:4px;display:flex;align-items:center;justify-content:space-between;gap:40px}
-#estrutec-lp .ai-band h3{font-size:1.6rem;margin-bottom:10px}
-#estrutec-lp .ai-band p{color:#c7c7c7;font-size:15px}
-#estrutec-lp .ai-band .text-link{flex:none;color:var(--orange)}
-#estrutec-lp .ai-band .text-link:hover{color:#d59650}
-
-/* Problem */
-#estrutec-lp .problem h2 span,#estrutec-lp .process h2 span,#estrutec-lp .faq h2 span{color:#787878}
-#estrutec-lp .problem .split>div>p,#estrutec-lp .faq .split>div>p{margin-top:25px;color:var(--muted)}
-#estrutec-lp .problem-list{padding-top:6px}
-#estrutec-lp .problem-list p{margin:0;padding:19px 0;border-bottom:1px solid var(--line);font-size:18px;display:flex;align-items:center;gap:18px}
-#estrutec-lp .problem-list p:before{content:"";width:7px;height:7px;background:var(--orange);flex:0 0 7px}
-#estrutec-lp .cost{grid-column:1/-1;border-left:4px solid var(--orange);padding:6px 0 6px 28px}
-#estrutec-lp .cost h3{font-size:1.5rem;margin-bottom:12px}
-#estrutec-lp .cost p{color:var(--muted);max-width:80ch}
-#estrutec-lp .cost strong{display:block;margin-top:12px;font-size:17px}
-#estrutec-lp .conclusion{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:50px;background:var(--ink);color:#fff;padding:44px;border-radius:4px}
-#estrutec-lp .conclusion h3{font-size:clamp(1.6rem,2.6vw,2.3rem);font-weight:800;text-transform:uppercase;line-height:1.1;max-width:22ch;margin-bottom:16px}
-#estrutec-lp .conclusion p{color:#c7c7c7;font-size:15px}
-#estrutec-lp .conclusion .button{flex:none}
-
-/* Maintenance */
-#estrutec-lp .maintenance{background:var(--orange)}
-#estrutec-lp .maintenance-inner{display:flex;align-items:center;justify-content:space-between;gap:50px;padding-block:56px}
-#estrutec-lp .maintenance h2{font-size:clamp(1.8rem,3vw,2.6rem)}
-#estrutec-lp .maintenance p{margin-top:14px;color:#000000;font-size:15px;max-width:75ch}
-#estrutec-lp .maintenance .button{background:var(--ink);color:#fff;flex:none}
-#estrutec-lp .maintenance .button:hover{background:#2a2a2a}
-#estrutec-lp .maintenance .button:focus-visible{outline-color:var(--ink)}
-
-/* Why */
-#estrutec-lp .why{background:var(--dark);color:#fff}
-#estrutec-lp .why .section-intro h2 span{color:var(--orange)}
-#estrutec-lp .why .section-intro p{color:#c7c7c7}
-#estrutec-lp .why-grid{list-style:none;counter-reset:why;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:0 38px;margin-top:55px}
-#estrutec-lp .why-grid li{counter-increment:why;border-top:1px solid #4d4d4d;padding:28px 0 32px}
-#estrutec-lp .why-grid li:before{content:"0" counter(why);display:block;font-size:14px;font-weight:800;color:var(--orange);margin-bottom:16px}
-#estrutec-lp .why-grid h3{text-transform:uppercase;font-size:1.1rem;letter-spacing:.01em;margin-bottom:10px}
-#estrutec-lp .why-grid p{color:#c7c7c7;font-size:15px}
-
-/* Smart pole */
-#estrutec-lp .pole{background:var(--alt)}
-#estrutec-lp .pole-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}
-#estrutec-lp .pole-photo{align-self:stretch;min-height:560px;border-radius:4px;overflow:hidden;background:var(--dark)}
-#estrutec-lp .pole-photo img{width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block}
-#estrutec-lp .pole-copy h2{font-size:clamp(2rem,3.4vw,3.1rem);text-transform:uppercase;font-weight:800}
-#estrutec-lp .pole-tagline{font-size:clamp(1.05rem,1.5vw,1.3rem);font-weight:700;line-height:1.4;margin:14px 0 20px}
-#estrutec-lp .pole-tagline span{color:var(--orange)}
-#estrutec-lp .pole-copy>p{color:var(--muted)}
-#estrutec-lp .pole-copy>h3{font-size:1rem;margin:28px 0 14px}
-#estrutec-lp .check-list{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px 28px}
-#estrutec-lp .check-list li{position:relative;padding-left:28px;font-size:15px;line-height:1.45}
-#estrutec-lp .check-list li:before{content:"";position:absolute;left:0;top:3px;width:16px;height:16px;border-radius:50%;background:var(--orange)}
-#estrutec-lp .check-list li:after{content:"";position:absolute;left:5px;top:7px;width:6px;height:3px;border-left:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:rotate(-45deg)}
-#estrutec-lp .pole-copy .pole-note{margin:26px 0;padding:18px 20px;background:var(--dark);color:#edd2b4;font-weight:600;font-size:15px;border-radius:4px;max-width:none}
-
-/* Strategy */
-#estrutec-lp .strategy{background:var(--ink);color:#fff;position:relative;overflow:hidden}
-#estrutec-lp .strategy h2{font-size:clamp(2.2rem,4.8vw,4.4rem);font-weight:800;text-transform:uppercase;line-height:1.02;letter-spacing:-.005em;max-width:20ch}
-#estrutec-lp .strategy h2 span{color:var(--orange)}
-#estrutec-lp .strategy-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:90px;margin-top:55px}
-#estrutec-lp .strategy-copy p{color:#c7c7c7;margin-bottom:20px}
-#estrutec-lp .strategy-copy .button{margin-top:10px}
-#estrutec-lp .audiences-title{font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--orange);margin-bottom:14px}
-#estrutec-lp .audiences article{display:grid;grid-template-columns:170px 1fr;gap:20px;border-top:1px solid #404040;padding:20px 0}
-#estrutec-lp .audiences p{color:#c7c7c7;font-size:14px}
-
-/* Process */
-#estrutec-lp .steps{list-style:none;counter-reset:step;display:grid;grid-template-columns:repeat(5,1fr);padding:0;margin:55px 0 0;gap:0}
-#estrutec-lp .steps li{counter-increment:step;position:relative;padding:0 24px 0 0}
-#estrutec-lp .steps li:before{content:"0" counter(step);display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:var(--ink);color:var(--orange);font-size:17px;font-weight:800;margin-bottom:22px;position:relative;z-index:1}
-#estrutec-lp .steps li:after{content:"";position:absolute;top:28px;left:56px;right:0;height:2px;background:linear-gradient(90deg,var(--orange),#e4e4e4)}
-#estrutec-lp .steps li:last-child:after{display:none}
-#estrutec-lp .steps h3{text-transform:uppercase;font-size:1.05rem;letter-spacing:.02em;margin-bottom:10px}
-#estrutec-lp .steps p{font-size:14px;color:var(--muted);max-width:26ch}
-#estrutec-lp .process-close{margin-top:55px;padding-top:34px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:40px}
-#estrutec-lp .process-close p{font-size:clamp(1.15rem,1.8vw,1.5rem);line-height:1.4;max-width:48ch}
-#estrutec-lp .process-close strong{color:var(--orange)}
-
-/* Region, clients and reviews */
-#estrutec-lp .authority{background:var(--alt)}
-#estrutec-lp .region{display:grid;grid-template-columns:1fr 1fr;gap:40px 95px;align-items:end}
-#estrutec-lp .region h2 span{color:var(--orange)}
-#estrutec-lp .region p{color:var(--muted);margin-bottom:10px}
-#estrutec-lp .clients{margin-top:55px;border-top:1px solid #d0d0d0;padding-top:30px}
-#estrutec-lp .clients>p{font-size:14px;color:var(--muted)}
-#estrutec-lp .client-logos{display:grid;grid-template-columns:repeat(7,1fr);gap:30px;align-items:center;margin-top:25px}
-#estrutec-lp .client-logos img{width:130px;height:70px;object-fit:contain;filter:grayscale(1)}
-#estrutec-lp .google-reviews{margin-top:38px;padding-top:34px;border-top:1px solid #d0d0d0}
-#estrutec-lp .reviews-heading{display:flex;justify-content:space-between;gap:30px;align-items:end}
-#estrutec-lp .reviews-heading>div{display:grid;grid-template-columns:auto auto;align-items:center;gap:5px 14px}
-#estrutec-lp .google-label{grid-column:1/-1;font-size:14px;color:var(--muted)}
-#estrutec-lp .reviews-heading strong{font-size:2rem;line-height:1}
-#estrutec-lp .reviews-heading strong span{color:var(--orange);font-size:1rem;letter-spacing:2px}
-#estrutec-lp .reviews-heading small{color:var(--muted)}
-#estrutec-lp .reviews-heading a{font-size:13px;font-weight:700}
-#estrutec-lp .review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}
-#estrutec-lp .review-grid blockquote{margin:0;background:#fff;padding:24px;border-left:3px solid var(--orange);min-height:150px;display:flex;flex-direction:column;justify-content:space-between}
-#estrutec-lp .review-grid blockquote p{font-size:16px}
-#estrutec-lp .review-grid cite{font-size:12px;color:var(--muted);font-style:normal;margin-top:22px}
-
-/* FAQ and closing */
-#estrutec-lp .questions details{border-bottom:1px solid var(--line)}
-#estrutec-lp .questions details:first-child{border-top:1px solid var(--line)}
-#estrutec-lp summary{cursor:pointer;font-size:16px;font-weight:700;padding:22px 34px 22px 0;position:relative;list-style:none}
-#estrutec-lp summary::-webkit-details-marker{display:none}
-#estrutec-lp summary:after{content:"+";position:absolute;right:5px;font-size:23px;top:15px;color:var(--orange)}
-#estrutec-lp details[open] summary:after{content:"−"}
-#estrutec-lp .questions details p{font-size:15px;color:var(--muted);padding-bottom:23px;padding-right:25px}
-#estrutec-lp .final-cta{margin-top:90px;padding:54px;background:var(--orange);display:grid;grid-template-columns:1.5fr 1fr;align-items:center;gap:65px;border-radius:4px}
-#estrutec-lp .final-cta h2{font-size:clamp(2rem,3.4vw,3rem);font-weight:800;text-transform:uppercase;line-height:1.05}
-#estrutec-lp .final-cta p{color:#000000;margin-top:18px;font-size:15px}
-#estrutec-lp .final-action p{font-size:13px;max-width:30ch}
-#estrutec-lp .final-cta .button:focus-visible{outline-color:var(--ink);outline-offset:5px}
-
-/* Floating WhatsApp */
-#estrutec-lp .whatsapp-float{position:fixed;right:22px;bottom:22px;z-index:30;display:flex;align-items:center;gap:10px;background:#25d366;color:#fff;text-decoration:none;font-weight:800;font-size:14px;padding:13px 18px 13px 14px;border-radius:40px;box-shadow:0 10px 28px #0005;transition:transform .18s}
-#estrutec-lp .whatsapp-float:hover{transform:translateY(-2px)}
-#estrutec-lp .whatsapp-float svg{width:26px;height:26px;fill:#fff}
-#estrutec-lp .whatsapp-float:focus-visible{outline-color:var(--ink)}
-
-/* Footer */
-#estrutec-lp footer{background:var(--ink);color:#c9c9c9;padding-block:46px 90px}
-#estrutec-lp .footer-inner{display:grid;grid-template-columns:1fr 1.35fr auto;align-items:start;gap:55px}
-#estrutec-lp .footer-brand p,#estrutec-lp .footer-top{font-size:13px}
-#estrutec-lp .footer-brand p{margin-top:18px}
-#estrutec-lp .footer-contacts{display:flex;flex-direction:column;gap:7px;font-size:13px;font-style:normal;line-height:1.55}
-#estrutec-lp .footer-contacts strong{color:#fff;font-size:15px;margin-bottom:4px}
-#estrutec-lp .footer-contacts a{text-decoration:none}
-#estrutec-lp .footer-contacts a:hover,#estrutec-lp .footer-top:hover{color:var(--orange)}
-
-/* Responsive */
-@media(max-width:1180px){#estrutec-lp .header nav{gap:16px;font-size:13px}#estrutec-lp .logo{width:180px}}
-@media(max-width:1050px){
-  #estrutec-lp .wrap{padding-inline:30px}
-  #estrutec-lp .header nav{display:none}
-  #estrutec-lp .hero-grid{grid-template-columns:1fr 1fr;gap:36px}
-  #estrutec-lp .hero-bg{width:100%}
-  #estrutec-lp .section{padding-block:80px}
-  #estrutec-lp .split,#estrutec-lp .region{gap:50px}
-  #estrutec-lp .benefit-grid,#estrutec-lp .services,#estrutec-lp .why-grid{grid-template-columns:repeat(2,1fr)}
-  #estrutec-lp .tech-list{grid-template-columns:repeat(2,1fr);gap:0 30px}
-  #estrutec-lp .tech-list li{padding-bottom:24px}
-  #estrutec-lp .pole-grid{gap:40px}
-  #estrutec-lp .strategy-grid{gap:50px}
-  #estrutec-lp .steps{grid-template-columns:repeat(3,1fr);row-gap:40px}
-  #estrutec-lp .steps li:nth-child(3):after{display:none}
-  #estrutec-lp .final-cta{gap:35px;padding:36px}
-  #estrutec-lp .client-logos{gap:20px}
-}
-@media(max-width:860px){
-  #estrutec-lp .hero-grid{grid-template-columns:1fr}
-  #estrutec-lp .hero h1{max-width:none}
-  #estrutec-lp .pole-grid,#estrutec-lp .strategy-grid{grid-template-columns:1fr}
-  #estrutec-lp .pole-photo{min-height:420px}
-  #estrutec-lp .ai-band,#estrutec-lp .conclusion,#estrutec-lp .maintenance-inner,#estrutec-lp .process-close{flex-direction:column;align-items:flex-start}
-}
-@media(max-width:760px){
-  html{scroll-padding-top:80px}
-  #estrutec-lp .wrap{padding-inline:22px}
-  #estrutec-lp .header-inner{min-height:70px;gap:14px}
-  #estrutec-lp .logo{width:150px}
-  #estrutec-lp .button.small{font-size:12px;padding:11px 12px;min-height:44px;gap:10px}
-  #estrutec-lp .button.small span{font-size:18px}
-  #estrutec-lp .hero:before{width:4px}
-  #estrutec-lp .hero-grid{gap:28px;padding-block:40px 32px}
-  #estrutec-lp .hero h1{font-size:clamp(2.2rem,10.5vw,3rem)}
-  #estrutec-lp .hero-lead{font-size:16px;margin:18px 0}
-  #estrutec-lp .stack{gap:8px}
-  #estrutec-lp .stack li{font-size:11px;padding:6px 9px}
-  #estrutec-lp .stack li+li{margin-left:0}
-  #estrutec-lp .stack li+li:after{display:none}
-  #estrutec-lp .hero-cta-text{font-size:15px}
-  #estrutec-lp .hero-copy>.button{width:100%}
-  #estrutec-lp .trust-strip{grid-template-columns:1fr 1fr;gap:14px 20px;font-size:13px;padding-block:22px}
-  #estrutec-lp .trust-strip span+span{padding-left:0;border:0}
-  #estrutec-lp .lead-panel{padding:22px}
-  #estrutec-lp .lead-panel h2{font-size:1.4rem}
-  #estrutec-lp .lead-panel h2 br{display:none}
-  #estrutec-lp .form-fields{gap:12px}
-  #estrutec-lp .form-fields label{font-size:12px}
-  #estrutec-lp .form-fields input,#estrutec-lp .form-fields select{padding:9px;min-height:44px}
-  #estrutec-lp .section{padding-block:64px}
-  #estrutec-lp .section-intro{display:block}
-  #estrutec-lp .section-intro p{margin-top:20px}
-  #estrutec-lp .split,#estrutec-lp .region{grid-template-columns:1fr;gap:30px}
-  #estrutec-lp .benefit-grid,#estrutec-lp .why-grid,#estrutec-lp .services,#estrutec-lp .tech-list{grid-template-columns:1fr;margin-top:35px}
-  #estrutec-lp .benefit-grid article{display:grid;grid-template-columns:44px 1fr;column-gap:16px;padding:22px 0}
-  #estrutec-lp .benefit-grid svg{grid-row:span 2;width:34px;height:34px;margin:0}
-  #estrutec-lp .service-thumb{height:200px}
-  #estrutec-lp .ai-band,#estrutec-lp .conclusion{padding:28px 24px;gap:22px}
-  #estrutec-lp .conclusion .button,#estrutec-lp .maintenance .button{width:100%}
-  #estrutec-lp .cost{padding-left:20px}
-  #estrutec-lp .problem-list p{font-size:16px}
-  #estrutec-lp .maintenance-inner{padding-block:44px;gap:26px}
-  #estrutec-lp .pole-photo{min-height:360px}
-  #estrutec-lp .check-list{grid-template-columns:1fr}
-  #estrutec-lp .pole-copy .button{width:100%}
-  #estrutec-lp .strategy-grid{margin-top:35px;gap:40px}
-  #estrutec-lp .strategy-copy .button{width:100%}
-  #estrutec-lp .audiences article{grid-template-columns:1fr;gap:6px}
-  #estrutec-lp .steps{grid-template-columns:1fr;row-gap:0;margin-top:35px}
-  #estrutec-lp .steps li{display:grid;grid-template-columns:48px 1fr;column-gap:18px;padding:0 0 28px}
-  #estrutec-lp .steps li:before{width:48px;height:48px;font-size:15px;margin:0;grid-row:span 2}
-  #estrutec-lp .steps li:after,#estrutec-lp .steps li:nth-child(3):after{display:block;top:48px;bottom:0;left:23px;right:auto;width:2px;height:auto;background:#e4e4e4}
-  #estrutec-lp .steps li:last-child:after{display:none}
-  #estrutec-lp .steps h3{margin-top:12px}
-  #estrutec-lp .process-close{margin-top:25px;gap:18px}
-  #estrutec-lp .client-logos{grid-template-columns:repeat(3,1fr);gap:15px}
-  #estrutec-lp .client-logos img{height:55px}
-  #estrutec-lp .reviews-heading{align-items:start;flex-direction:column}
-  #estrutec-lp .review-grid{grid-template-columns:1fr}
-  #estrutec-lp .review-grid blockquote{min-height:0}
-  #estrutec-lp .questions summary{font-size:15px}
-  #estrutec-lp .final-cta{margin-top:55px;grid-template-columns:1fr;gap:26px;padding:28px}
-  #estrutec-lp .final-action .button{width:100%}
-  #estrutec-lp .footer-inner{grid-template-columns:1fr;gap:28px}
-  #estrutec-lp .whatsapp-float{right:16px;bottom:16px;padding:13px}
-  #estrutec-lp .whatsapp-float span{display:none}
-}
-@media(max-width:370px){#estrutec-lp .form-fields{grid-template-columns:1fr}#estrutec-lp .lead-panel{padding:18px}#estrutec-lp .logo{width:128px}#estrutec-lp .button.small{font-size:11px;gap:8px}#estrutec-lp .wrap{padding-inline:18px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}#estrutec-lp, #estrutec-lp *{transition:none!important}}
-@media print{#estrutec-lp .skip,#estrutec-lp .whatsapp-float{display:none!important}#estrutec-lp .header{position:static}}
-
-/* Location */
-#estrutec-lp .location{margin-top:55px;padding:32px 36px;background:var(--ink);color:#fff;border-radius:4px;display:flex;align-items:center;justify-content:space-between;gap:40px}
-#estrutec-lp .location h3{font-size:1.4rem;margin-bottom:10px}
-#estrutec-lp .location address{font-style:normal;color:#c7c7c7;font-size:15px;line-height:1.6}
-#estrutec-lp .location .button{flex:none}
-#estrutec-lp .footer-contacts a b{color:var(--orange)}
-@media(max-width:760px){#estrutec-lp .location{flex-direction:column;align-items:flex-start;padding:26px 24px;gap:22px}#estrutec-lp .location .button{width:100%}}
-
-#estrutec-lp .location{flex-wrap:wrap}
-#estrutec-lp .location-map{flex:1 0 100%;height:460px;border-radius:4px;overflow:hidden;background:#1c1c1c}
-#estrutec-lp .location-map iframe{display:block;width:100%;height:100%;border:0}
-@media(max-width:760px){#estrutec-lp .location-map{flex:none;width:100%;height:420px}}
-
-#estrutec-lp .review-grid cite b{color:var(--ink);font-weight:800}
-
-#estrutec-lp .button.ghost{background:transparent;color:#fff;border:1px solid #ffffff55;justify-content:center;gap:10px}
-#estrutec-lp .button.ghost:hover{background:#ffffff14}
-#estrutec-lp .button svg,#estrutec-lp .ig-link svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;flex:none}
-#estrutec-lp .ig-link{display:flex;align-items:center;gap:8px}
-#estrutec-lp .location{gap:20px 24px}
-#estrutec-lp .location>div:first-child{margin-right:auto}
-@media(max-width:760px){#estrutec-lp .location .button.ghost{width:100%}}
-
-/* Mobile touch targets and minimum text size. */
-@media(max-width:760px){
-  #estrutec-lp .stack li{font-size:12px}
-  #estrutec-lp .footer-contacts a,#estrutec-lp .footer-top{display:flex;align-items:center;min-height:44px}
-  #estrutec-lp .footer-contacts a[href*="maps"]{display:block;padding-block:8px}
-  #estrutec-lp .footer-contacts{gap:0}
-  #estrutec-lp .footer-contacts>span{padding-bottom:8px}
-}
-@media(max-width:370px){#estrutec-lp .button.small{font-size:12px;padding:11px 10px}#estrutec-lp .logo{width:120px}}
-
-/* Top bar removed: logo lives in the hero. */
-#estrutec-lp .hero-brand{position:relative;padding-top:30px}
-#estrutec-lp .hero-brand .logo{width:210px}
-#estrutec-lp .hero-grid{padding-block:40px 52px}
-
-/* Solution stack on one line, grouped with the key facts. */
-#estrutec-lp .hero-facts{border-top:1px solid var(--darkline);padding-block:24px}
-#estrutec-lp .hero-facts .stack{list-style:none;padding:0;margin:0 0 16px;display:flex;flex-wrap:wrap;align-items:center;gap:6px 0}
-#estrutec-lp .hero-facts .stack li{border:0;background:none;padding:0;margin:0;border-radius:0;font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#fff;white-space:nowrap}
-#estrutec-lp .hero-facts .stack li+li{margin-left:0}
-#estrutec-lp .hero-facts .stack li+li:after{display:none}
-#estrutec-lp .hero-facts .stack li+li:before{content:"+";color:var(--orange);font-size:18px;font-weight:800;margin-inline:14px;position:static;transform:none;display:inline}
-#estrutec-lp .hero-facts .trust-strip{padding:16px 0 0;border-top:1px solid #ffffff1f}
-
-/* Six photos together, orange call to action as a full-width band. */
-#estrutec-lp .services{margin-bottom:0}
-#estrutec-lp .tech-cta{margin-top:20px;padding:30px 36px;background:var(--orange);border-radius:4px;display:flex;align-items:center;justify-content:space-between;gap:40px}
-#estrutec-lp .tech-cta h3{font-size:1.45rem;line-height:1.2;max-width:34ch;margin-bottom:8px}
-#estrutec-lp .tech-cta p{color:#000000;font-size:15px}
-#estrutec-lp .tech-cta .button{flex:none}
-#estrutec-lp .tech-cta .button:focus-visible{outline-color:var(--ink)}
-#estrutec-lp .tech-list{margin-top:48px}
-
-#estrutec-lp .strategy-copy .no-kits{display:block;color:#fff;font-weight:800;font-size:clamp(1.15rem,1.7vw,1.4rem);line-height:1.3}
-
-@media(max-width:1050px){#estrutec-lp .hero-grid{padding-block:32px 40px}}
-@media(max-width:860px){#estrutec-lp .tech-cta{flex-direction:column;align-items:flex-start;gap:20px}}
-@media(max-width:760px){
-  #estrutec-lp .hero-brand{padding-top:20px}
-  #estrutec-lp .hero-brand .logo{width:150px}
-  #estrutec-lp .hero-grid{padding-block:24px 32px}
-  #estrutec-lp .hero-facts{padding-block:20px}
-  #estrutec-lp .hero-facts .stack li{font-size:12px;letter-spacing:.04em}
-  #estrutec-lp .hero-facts .stack li+li:before{margin-inline:9px}
-  #estrutec-lp .services article{display:grid;grid-template-columns:104px 1fr;column-gap:16px;align-items:start;padding-block:18px}
-  #estrutec-lp .services .service-thumb{grid-row:span 2;width:104px;height:104px;margin:0}
-  #estrutec-lp .services h3{font-size:16px;margin-bottom:6px}
-  #estrutec-lp .services p{font-size:14px;line-height:1.5}
-  #estrutec-lp .tech-cta{padding:24px}
-  #estrutec-lp .tech-cta .button{width:100%}
-  #estrutec-lp .tech-list{margin-top:32px}
-}
-@media(max-width:370px){#estrutec-lp .services article{grid-template-columns:88px 1fr;column-gap:12px}#estrutec-lp .services .service-thumb{width:88px;height:88px}#estrutec-lp .hero-brand .logo{width:128px}}
-
-#estrutec-lp .services article:nth-child(4) .service-thumb{object-position:center 30%}
-@media(max-width:760px){#estrutec-lp .services article:nth-child(4) .service-thumb{object-position:40% 32%}}
-
-/* Night vision section */
-#estrutec-lp .night{background:var(--ink);color:#fff}
-#estrutec-lp .night-grid{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1fr);gap:70px;align-items:center}
-#estrutec-lp .night-photo{position:relative;border-radius:4px;overflow:hidden;aspect-ratio:1/1;max-width:560px;width:100%}
-#estrutec-lp .night-photo img{width:100%;height:100%;object-fit:cover;display:block}
-#estrutec-lp .night-tag{position:absolute;bottom:16px;font-size:12px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:7px 12px;border-radius:3px;background:#111315d9;color:#fff;border:1px solid #ffffff33}
-#estrutec-lp .night-tag.left{left:16px}
-#estrutec-lp .night-tag.right{right:16px;color:var(--orange);border-color:var(--orange)}
-#estrutec-lp .night-copy h2{font-size:clamp(2rem,3.6vw,3.2rem);font-weight:800;text-transform:uppercase;line-height:1.05;letter-spacing:-.005em}
-#estrutec-lp .night-copy h2 span{color:var(--orange)}
-#estrutec-lp .night-copy>p{color:#c7c7c7;margin:22px 0 26px;font-size:17px}
-#estrutec-lp .night-copy .check-list{grid-template-columns:1fr;gap:14px;margin-bottom:34px}
-#estrutec-lp .night-copy .check-list li{font-size:16px}
-#estrutec-lp .night-copy .check-list li:after{border-color:var(--ink)}
-@media(max-width:860px){#estrutec-lp .night-grid{grid-template-columns:1fr;gap:36px}#estrutec-lp .night-photo{max-width:none}}
-@media(max-width:760px){#estrutec-lp .night-tag{font-size:10px;padding:6px 8px;bottom:10px}#estrutec-lp .night-tag.left{left:10px}#estrutec-lp .night-tag.right{right:10px}#estrutec-lp .night-copy .button{width:100%}}
-
-/* CFTV section */
-#estrutec-lp .cftv-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.95fr);gap:70px;align-items:center}
-#estrutec-lp .cftv-photo{border-radius:4px;overflow:hidden;aspect-ratio:1/1;max-width:560px;width:100%;justify-self:end}
-#estrutec-lp .cftv-photo img{width:100%;height:100%;object-fit:cover;display:block}
-#estrutec-lp .cftv-copy h2{font-size:clamp(2rem,3.6vw,3.2rem);font-weight:800;text-transform:uppercase;line-height:1.05;letter-spacing:-.005em}
-#estrutec-lp .cftv-copy h2 span{color:var(--orange)}
-#estrutec-lp .cftv-copy>p{color:var(--muted);margin:22px 0 26px;font-size:17px}
-#estrutec-lp .cftv-copy .check-list{grid-template-columns:1fr;gap:14px;margin-bottom:34px}
-#estrutec-lp .cftv-copy .check-list li{font-size:16px}
-@media(max-width:860px){#estrutec-lp .cftv-grid{grid-template-columns:1fr;gap:36px}#estrutec-lp .cftv-photo{max-width:none;justify-self:stretch;order:-1}}
-@media(max-width:760px){#estrutec-lp .cftv-copy .button{width:100%}}
-
-
-/* Six photo cards (3 x 2 grid). */
-#estrutec-lp .services article:nth-child(5) .service-thumb{object-position:center 42%}
-#estrutec-lp .services article:nth-child(6) .service-thumb{object-position:center 85%}
-@media(max-width:760px){
-  #estrutec-lp .services article:nth-child(5) .service-thumb{object-position:62% 45%}
-  #estrutec-lp .services article:nth-child(6) .service-thumb{object-position:62% 70%}
-}
-
-/* Personalized kit section */
-#estrutec-lp .kit{background:var(--alt)}
-#estrutec-lp .kit-head{display:grid;grid-template-columns:1.1fr 1fr;gap:45px 95px;align-items:end}
-#estrutec-lp .kit-head h2{font-size:clamp(2rem,3.6vw,3.2rem);font-weight:800;text-transform:uppercase;line-height:1.05;letter-spacing:-.005em}
-#estrutec-lp .kit-head h2 span{color:var(--orange)}
-#estrutec-lp .kit-head p{color:var(--muted);font-size:17px}
-#estrutec-lp .kit-head .kit-strong{color:var(--ink);font-weight:800;margin-top:14px;font-size:clamp(1.1rem,1.6vw,1.3rem);line-height:1.3}
-#estrutec-lp .kit-steps{list-style:none;counter-reset:kit;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:0 38px;margin:50px 0 44px}
-#estrutec-lp .kit-steps li{counter-increment:kit;border-top:2px solid var(--ink);padding-top:22px}
-#estrutec-lp .kit-steps li:before{content:"0" counter(kit);display:block;color:var(--ink);font-weight:800;font-size:14px;margin-bottom:14px}
-#estrutec-lp .kit-steps h3{font-size:1.25rem;margin-bottom:8px}
-#estrutec-lp .kit-steps p{color:var(--muted);font-size:15px}
-@media(max-width:860px){#estrutec-lp .kit-head{grid-template-columns:1fr;gap:24px}}
-@media(max-width:760px){#estrutec-lp .kit-steps{grid-template-columns:1fr;gap:24px;margin:34px 0 30px}#estrutec-lp .kit .button{width:100%}}
-
-/* Lead popup */
-#estrutec-lp #lead-modal{border:0;padding:0;background:transparent;width:min(480px,calc(100% - 32px));max-width:none;max-height:calc(100dvh - 32px);overflow:visible;color:var(--ink)}
-#estrutec-lp #lead-modal::backdrop{background:#0009}
-#estrutec-lp #lead-modal .lead-panel{max-height:calc(100dvh - 32px);overflow:auto;box-shadow:0 30px 80px #0008;padding-top:44px}
-#estrutec-lp .modal-close{position:absolute;top:8px;right:8px;z-index:2;width:44px;height:44px;border:0;border-radius:50%;background:transparent;color:var(--ink);font:400 30px/1 Barlow,Arial,sans-serif;cursor:pointer}
-#estrutec-lp .modal-close:hover{background:var(--alt)}
-#estrutec-lp .modal-close:focus-visible{outline:3px solid var(--ink);outline-offset:0}
-body:has(#estrutec-lp #lead-modal[open]){overflow:hidden}
-@media(max-width:760px){#estrutec-lp #lead-modal .lead-panel{padding:44px 20px 20px}}
-
-/* Section order changed: keep light and dark bands alternating. */
-#estrutec-lp .pole{background:var(--paper)}
-
-#estrutec-lp .clients-section .clients{margin-top:0;border-top:0;padding-top:0}
-
-#estrutec-lp .lead-panel .lead-submit{margin-top:20px}
-
-
-/* Display type: Barlow Condensed, as on the Estrutec pole artwork. Body copy stays Barlow. */
-#estrutec-lp{--display:'Barlow Condensed','Arial Narrow',Arial,sans-serif}
-#estrutec-lp h1,#estrutec-lp h2,#estrutec-lp h3,#estrutec-lp .button,#estrutec-lp .text-link,#estrutec-lp summary,#estrutec-lp .stack li,#estrutec-lp .audiences-title,#estrutec-lp .night-tag,#estrutec-lp .trust-strip,#estrutec-lp .whatsapp-float,#estrutec-lp .google-label,#estrutec-lp .modal-close{font-family:var(--display)}
-#estrutec-lp h1,#estrutec-lp h2,#estrutec-lp h3{font-weight:700}
-#estrutec-lp .button{font-size:18px;letter-spacing:.02em;text-transform:uppercase}
-#estrutec-lp .button.small{font-size:16px}
-#estrutec-lp .text-link{font-size:17px;letter-spacing:.02em;text-transform:uppercase}
-#estrutec-lp .lead-panel .button{font-size:17px}
-#estrutec-lp summary{font-size:19px;font-weight:600}
-#estrutec-lp .stack li{font-size:15px}
-#estrutec-lp .trust-strip{font-size:16px;letter-spacing:.02em;text-transform:uppercase}
-#estrutec-lp .whatsapp-float{font-size:16px;letter-spacing:.02em;text-transform:uppercase}
-#estrutec-lp .benefit-grid h3,#estrutec-lp .why-grid h3,#estrutec-lp .steps h3{font-size:1.3rem}
-#estrutec-lp h3{font-size:1.4rem}
-#estrutec-lp .services h3,#estrutec-lp .tech-list h3{font-size:1.35rem}
-#estrutec-lp .problem-list p{font-size:20px}
-@media(max-width:760px){#estrutec-lp .button{font-size:17px}#estrutec-lp .button.small{font-size:15px}#estrutec-lp .stack li{font-size:14px}#estrutec-lp summary{font-size:18px}#estrutec-lp .services h3{font-size:1.2rem}}
-#estrutec-lp .hero h1{font-size:clamp(3.2rem,6.2vw,5.9rem);max-width:14ch;line-height:1}
-#estrutec-lp .hero-facts .stack li{font-size:17px}
-#estrutec-lp .trust-strip{font-size:17px}
-@media(max-width:760px){#estrutec-lp .hero h1{font-size:clamp(2.7rem,13vw,3.8rem);max-width:none}#estrutec-lp .hero-facts .stack li{font-size:15px}#estrutec-lp .trust-strip{font-size:16px}}
-
-#estrutec-lp .services article:nth-child(1) .service-thumb{object-position:62% 50%}
-@media(max-width:760px){#estrutec-lp .services article:nth-child(1) .service-thumb{object-position:70% 50%}}
-
-#estrutec-lp .services article:nth-child(2) .service-thumb{object-position:center 50%}
-
-/* Show the Estrutec logo at the bottom of the control room photo. */
-#estrutec-lp .services article:nth-child(2) .service-thumb{object-position:center 95%}
-@media(max-width:1050px){#estrutec-lp .services article:nth-child(2) .service-thumb{object-position:center 100%}}
-@media(max-width:760px){#estrutec-lp .services article:nth-child(2) .service-thumb{object-position:center 80%}}
-
-
-/* Keep the photo labels clear of the centered logo on narrow phones. */
-@media(max-width:420px){#estrutec-lp .night-tag{font-size:9px;letter-spacing:0;padding:5px 6px;bottom:8px}#estrutec-lp .night-tag.left{left:8px}#estrutec-lp .night-tag.right{right:8px}}
-
-#estrutec-lp .services article:nth-child(4) .service-thumb{object-position:center 18%}
-@media(max-width:760px){#estrutec-lp .services article:nth-child(4) .service-thumb{object-position:center}}
-
-/* Portrait CFTV image: show it whole, logo included. */
-#estrutec-lp .cftv-photo{aspect-ratio:2/3;max-width:460px}
-#estrutec-lp .cftv-grid{grid-template-columns:minmax(0,1fr) minmax(0,460px)}
-@media(max-width:860px){#estrutec-lp .cftv-grid{grid-template-columns:1fr}#estrutec-lp .cftv-photo{max-width:420px;justify-self:center}}
-
-#estrutec-lp .services article:nth-child(3) .service-thumb{object-position:center}
-@media(max-width:760px){#estrutec-lp .services article:nth-child(3) .service-thumb{object-position:99% center}}
-
-/* Electric fence section */
-#estrutec-lp .fence-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:70px;align-items:center}
-#estrutec-lp .fence-photo{border-radius:4px;overflow:hidden;aspect-ratio:16/9;width:100%}
-#estrutec-lp .fence-photo img{width:100%;height:100%;object-fit:cover;display:block}
-#estrutec-lp .fence-copy h2{font-size:clamp(2rem,3.6vw,3.2rem);font-weight:800;text-transform:uppercase;line-height:1.05}
-#estrutec-lp .fence-copy h2 span{color:var(--orange)}
-#estrutec-lp .fence-copy p{color:var(--muted);font-size:17px;margin-top:18px}
-#estrutec-lp .fence-copy .fence-lead{color:var(--ink);font-weight:600;font-size:19px;margin-top:22px}
-#estrutec-lp .fence-copy .button{margin-top:30px}
-@media(max-width:860px){#estrutec-lp .fence-grid{grid-template-columns:1fr;gap:34px}}
-@media(max-width:760px){#estrutec-lp .fence-copy .button{width:100%}}
-
-/* Fence now sits above the kit section: keep the bands alternating. */
-#estrutec-lp .fence{background:var(--alt)}
-#estrutec-lp .kit{background:var(--paper)}
-
-/* WhatsApp green on the floating button and the lead form submit button. */
-#estrutec-lp .whatsapp-float:hover{background:#1ebe5b}
-#estrutec-lp .whatsapp-float:focus-visible{outline-color:#000}
-#estrutec-lp .lead-panel .lead-submit{background:#25d366;color:#fff}
-#estrutec-lp .lead-panel .lead-submit:hover{background:#1ebe5b}
-#estrutec-lp .lead-panel .lead-submit:disabled{background:#9be3b8;color:#000}
-#estrutec-lp .lead-panel .lead-submit:focus-visible{outline-color:#000}
-
-#estrutec-lp .services article:nth-child(4) .service-thumb{object-position:center}
-@media(max-width:760px){#estrutec-lp .services article:nth-child(4) .service-thumb{object-position:78% center}}
-
-/* Two remaining icon items: split the row evenly. */
-#estrutec-lp .tech-list{grid-template-columns:repeat(2,1fr);gap:0 38px}
-#estrutec-lp .tech-list p{font-size:15px;max-width:44ch}
-@media(max-width:760px){#estrutec-lp .tech-list{grid-template-columns:1fr}}
-
-/* Three icon items in one row. */
-#estrutec-lp .tech-list{grid-template-columns:repeat(3,1fr);gap:0 38px}
-#estrutec-lp .tech-list h3 .kw{display:block;font-size:1.1rem;font-weight:600;color:var(--orange);margin-top:2px}
-@media(max-width:1050px){#estrutec-lp .tech-list{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:760px){#estrutec-lp .tech-list{grid-template-columns:1fr}}
-
-/* Public security programs highlight in the smart pole section. */
-#estrutec-lp .pole-gov{margin:26px 0 0;padding:22px 24px;border:2px solid var(--ink);border-radius:4px;background:#fff}
-#estrutec-lp .pole-copy .pole-gov>h3{margin:0 0 6px;font-size:1.25rem;text-transform:uppercase}
-#estrutec-lp .pole-gov p{font-size:15px;margin:0 0 14px;color:var(--muted)}
-#estrutec-lp .gov-list{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:10px}
-#estrutec-lp .gov-list li{font-family:var(--display);font-weight:800;font-size:1.25rem;letter-spacing:.02em;text-transform:uppercase;padding:8px 16px;border-radius:3px;background:var(--ink);color:#fff;border-bottom:4px solid var(--orange)}
-@media(max-width:760px){#estrutec-lp .pole-gov{padding:18px}#estrutec-lp .gov-list li{font-size:1.1rem;padding:7px 12px}}
-
-/* Client brands: white tiles so logos with white backgrounds look consistent. */
-#estrutec-lp .clients-section .clients{margin-top:0;border-top:0;padding-top:0}
-#estrutec-lp .clients-title{font-size:clamp(1.6rem,2.6vw,2.2rem);font-weight:800;text-transform:uppercase;margin-bottom:26px}
-#estrutec-lp .client-logos{grid-template-columns:repeat(4,1fr);gap:18px;margin-top:0}
-#estrutec-lp .client-logos>div{background:#fff;border-radius:4px;aspect-ratio:3/2;display:flex;align-items:center;justify-content:center;padding:14px}
-#estrutec-lp .client-logos img{width:100%;height:100%;max-width:none;object-fit:contain;filter:none}
-#estrutec-lp .clients-section .google-reviews{margin-top:56px;padding-top:44px;border-top:1px solid #d0d0d0}
-@media(max-width:760px){#estrutec-lp .client-logos{grid-template-columns:1fr 1fr;gap:12px}#estrutec-lp .client-logos img{height:100%}#estrutec-lp .clients-section .google-reviews{margin-top:40px;padding-top:32px}}
-
-/* Photo in place of the icon for the perimeter protection item. */
-#estrutec-lp .tech-list .tech-photo{display:block;width:100%;height:230px;object-fit:cover;object-position:center 70%;border-radius:4px;margin-bottom:18px}
-@media(max-width:760px){#estrutec-lp .tech-list .tech-photo{height:200px;object-position:center 75%}}
-#estrutec-lp .tech-list .tech-photo{height:auto;aspect-ratio:1/1;object-position:center}
-@media(max-width:760px){#estrutec-lp .tech-list .tech-photo{height:auto;aspect-ratio:1/1;max-width:420px;object-position:center}}
-
-/* The panic button photo is landscape: show it whole. */
-#estrutec-lp .tech-list .tech-photo-wide{aspect-ratio:16/9}
-@media(max-width:760px){#estrutec-lp .tech-list .tech-photo-wide{max-width:none}}
-
-/* Both photos share one 16:10 frame; crops keep the Estrutec logo in view. */
-#estrutec-lp .tech-list .tech-photo,#estrutec-lp .tech-list .tech-photo-wide{aspect-ratio:16/10;height:auto;max-width:none;object-fit:cover}
-#estrutec-lp .tech-list .tech-photo-wide{object-position:100% 50%}
-#estrutec-lp .tech-list li:nth-child(2) .tech-photo{object-position:50% 100%}
-@media(max-width:760px){#estrutec-lp .tech-list .tech-photo,#estrutec-lp .tech-list .tech-photo-wide{max-width:none}}
-
-#estrutec-lp .tech-list li:nth-child(3) .tech-photo{object-position:100% 50%}
-@media(min-width:761px) and (max-width:1050px){#estrutec-lp .tech-list{grid-template-columns:repeat(3,1fr);gap:0 20px}#estrutec-lp .tech-list p{font-size:14px}}
-
-#estrutec-lp .tech-list h3 .kw{display:inline;font-size:inherit;margin:0}
-
-#estrutec-lp .benefits[hidden]{display:none!important}
-
-/* Phone emphasis. */
-#estrutec-lp .footer-contacts a.footer-phone{display:flex;align-items:center;gap:12px;color:var(--orange);font-family:var(--display);font-weight:800;font-size:1.9rem;line-height:1.05;margin:6px 0}
-#estrutec-lp .footer-phone svg{width:30px;height:30px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-#estrutec-lp .footer-phone small{display:block;font-family:Barlow,Arial,sans-serif;font-weight:600;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:#c7c7c7;margin-bottom:2px}
-#estrutec-lp .footer-contacts a.footer-phone:hover{color:#fff}
-#estrutec-lp .button.phone-btn{background:#fff;color:#000;justify-content:center;gap:10px}
-#estrutec-lp .button.phone-btn:hover{background:var(--orange)}
-#estrutec-lp .button.phone-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
-@media(max-width:760px){#estrutec-lp .footer-contacts a.footer-phone{min-height:56px;font-size:2rem}#estrutec-lp .location .button.phone-btn{width:100%}}
-
-#estrutec-lp .client-logos{grid-template-columns:repeat(3,1fr)}
-@media(max-width:760px){#estrutec-lp .client-logos{grid-template-columns:1fr 1fr}}
-/* The Inkcor file is tiny (90x77px): keep it near its native size so it stays sharp. */
-#estrutec-lp .client-logos img[alt^="Inkcor"]{width:auto;height:auto;max-width:100px;max-height:86px;margin:auto}
-
-#estrutec-lp .strategy h2{font-size:clamp(2rem,4.2vw,3.8rem);max-width:24ch}
-
-/* Smart pole: what it is and benefits. */
-#estrutec-lp .pole-copy>h3.pole-q{font-family:var(--display);font-size:1.5rem;text-transform:uppercase;margin:30px 0 10px}
-#estrutec-lp .pole-copy>h3.pole-q+p{margin-top:0}
-#estrutec-lp .benefit-list{list-style:none;padding:0;display:grid;gap:14px}
-#estrutec-lp .benefit-list li{position:relative;padding-left:28px;font-size:16px;line-height:1.5;color:var(--muted)}
-#estrutec-lp .benefit-list li:before{content:"";position:absolute;left:0;top:6px;width:14px;height:14px;border-radius:50%;background:var(--orange)}
-#estrutec-lp .benefit-list strong{color:var(--ink);font-weight:700}
-#estrutec-lp .pole-copy>h3.pole-q+p+p{margin-top:14px}
-
-/* Autonomous gatehouse section */
-#estrutec-lp .gate{background:var(--alt)}
-#estrutec-lp .gate-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:70px;align-items:center}
-#estrutec-lp .gate-photo{border-radius:4px;overflow:hidden;aspect-ratio:3/2;width:100%}
-#estrutec-lp .gate-photo img{width:100%;height:100%;object-fit:cover;display:block}
-#estrutec-lp .gate-copy h2{font-size:clamp(2rem,3.6vw,3.2rem);font-weight:800;text-transform:uppercase;line-height:1.05}
-#estrutec-lp .gate-copy h2 span{color:var(--orange)}
-#estrutec-lp .gate-copy p{color:var(--muted);font-size:17px;margin-top:16px}
-#estrutec-lp .gate-copy .gate-lead{color:var(--ink);font-weight:600;font-size:19px;margin-top:22px}
-#estrutec-lp .gate-copy .button{margin-top:28px}
-@media(max-width:860px){#estrutec-lp .gate-grid{grid-template-columns:1fr;gap:34px}}
-@media(max-width:760px){#estrutec-lp .gate-copy .button{width:100%}}
-
-/* Fence section on black: the orange title and white text read clearly. */
-#estrutec-lp .fence{background:var(--ink);color:#fff}
-#estrutec-lp .fence-copy h2{color:#fff}
-#estrutec-lp .fence-copy h2 span{color:var(--orange)}
-#estrutec-lp .fence-copy p{color:#d6d6d6}
-#estrutec-lp .fence-copy .fence-lead{color:#fff}
-
-/* Logos of the public security programs. */
-#estrutec-lp .gov-logos{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-#estrutec-lp .gov-logos li{aspect-ratio:3/2;border:1px solid #d0d0d0;border-radius:4px;overflow:hidden;background:#fff;display:flex;align-items:center;justify-content:center}
-#estrutec-lp .gov-logos img{width:100%;height:100%;object-fit:contain;display:block}
-#estrutec-lp .gov-logos li:first-child img{object-fit:cover}
-@media(max-width:760px){#estrutec-lp .gov-logos{grid-template-columns:1fr 1fr;gap:10px}#estrutec-lp .gov-logos li:last-child{grid-column:1/-1;aspect-ratio:3/1.3}}
-
-/* Full Color highlight inside the night vision section. */
-#estrutec-lp .night-fc{margin:0 0 26px;padding:18px 20px;border-left:4px solid var(--orange);background:#121212}
-#estrutec-lp .night-copy .night-fc h3{font-family:var(--display);font-size:1.35rem;text-transform:uppercase;color:var(--orange);margin-bottom:6px}
-#estrutec-lp .night-copy .night-fc p{margin:0;font-size:16px;color:#e4e4e4}
-
-#estrutec-lp .night-photo{background:#000}
-#estrutec-lp .night-photo video{width:100%;height:100%;object-fit:cover;display:block;background:#000}
-
-/* Footer credits. */
-#estrutec-lp .footer-credits{margin-top:34px;padding-top:22px;border-top:1px solid var(--darkline);font-size:13px;color:#c2c2c2}
-#estrutec-lp .footer-credits p{max-width:none}
-#estrutec-lp .footer-credits a{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:3px;display:inline-block;padding-block:6px}
-#estrutec-lp .footer-credits a:hover{color:var(--orange)}
-@media(max-width:760px){#estrutec-lp .footer-credits{text-align:left}}
-
-#estrutec-lp h1,#estrutec-lp h2,#estrutec-lp h3,#estrutec-lp h4{color:inherit;text-shadow:none}
-#estrutec-lp li{margin:0}
-#estrutec-lp img{border:0;box-shadow:none}
-#estrutec-lp a{box-shadow:none}
-#estrutec-lp p{margin-bottom:0;font-size:inherit}
-#estrutec-lp li,#estrutec-lp address{font-size:inherit}
-
-</style>
+<style>@font-face{font-family: 'Barlow';font-style: normal;font-weight: 400;font-display: swap;src: url(https://cdn.jsdelivr.net/gh/viniciusgestortrafego-stack/estrutec@7f52102d3a68837c69e37e772f532509e68f5ef4/outputs/dist/assets/barlow-400.woff2) format('woff2')}@font-face{font-family: 'Barlow';font-style: normal;font-weight: 500;font-display: swap;src: url(https://cdn.jsdelivr.net/gh/viniciusgestortrafego-stack/estrutec@7f52102d3a68837c69e37e772f532509e68f5ef4/outputs/dist/assets/barlow-500.woff2) format('woff2')}@font-face{font-family: 'Barlow';font-style: normal;font-weight: 600;font-display: swap;src: url(https://cdn.jsdelivr.net/gh/viniciusgestortrafego-stack/estrutec@7f52102d3a68837c69e37e772f532509e68f5ef4/outputs/dist/assets/barlow-600.woff2) format('woff2')}@font-face{font-family: 'Barlow';font-style: normal;font-weight: 700;font-display: swap;src: url(https://cdn.jsdelivr.net/gh/viniciusgestortrafego-stack/estrutec@7f52102d3a68837c69e37e772f532509e68f5ef4/outputs/dist/assets/barlow-700.woff2) format('woff2')}@font-face{font-family: 'Barlow';font-style: normal;font-weight: 800;font-display: swap;src: url(https://cdn.jsdelivr.net/gh/viniciusgestortrafego-stack/estrutec@7f52102d3a68837c69e37e772f532509e68f5ef4/outputs/dist/assets/barlow-800.woff2) format('woff2')}@font-face{font-family: 'Barlow Condensed';font-style: normal;font-weight: 500;font-display: swap;src: url(https://cdn.jsdelivr.net/gh/viniciusgestortrafego-stack/estrutec@7f52102d3a68837c69e37e772f532509e68f5ef4/outputs/dist/assets/barlow-condensed-500.woff2) format('woff2')}@font-face{font-family: 'Barlow Condensed';font-style: normal;font-weight: 600;font-display: swap;src: url(https://cdn.jsdelivr.net/gh/viniciusgestortrafego-stack/estrutec@7f52102d3a68837c69e37e772f532509e68f5ef4/outputs/dist/assets/barlow-condensed-600.woff2) format('woff2')}@font-face{font-family: 'Barlow Condensed';font-style: normal;font-weight: 700;font-display: swap;src: url(https://cdn.jsdelivr.net/gh/viniciusgestortrafego-stack/estrutec@7f52102d3a68837c69e37e772f532509e68f5ef4/outputs/dist/assets/barlow-condensed-700.woff2) format('woff2')}@font-face{font-family: 'Barlow Condensed';font-style: normal;font-weight: 800;font-display: swap;src: url(https://cdn.jsdelivr.net/gh/viniciusgestortrafego-stack/estrutec@7f52102d3a68837c69e37e772f532509e68f5ef4/outputs/dist/assets/barlow-condensed-800.woff2) format('woff2')}#estrutec-lp{--ink:#000000;--dark:#121212;--muted:#595959;--orange:#cc7f29;--paper:#fff;--alt:#f3f3f3;--line:#e0e0e0;--darkline:#2e2e2e}#estrutec-lp,#estrutec-lp *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}#estrutec-lp{margin:0;background:var(--paper);color:var(--ink);font-family:Barlow,Arial,sans-serif;font-size:16px;line-height:1.65}#estrutec-lp ::selection{background:var(--orange);color:var(--ink)}#estrutec-lp a{color:inherit;text-underline-offset:5px}#estrutec-lp a:focus-visible,#estrutec-lp summary:focus-visible,#estrutec-lp button:focus-visible{outline:3px solid var(--orange);outline-offset:6px}#estrutec-lp h1,#estrutec-lp h2,#estrutec-lp h3,#estrutec-lp p,#estrutec-lp figure,#estrutec-lp ul,#estrutec-lp ol{margin:0}#estrutec-lp h1,#estrutec-lp h2,#estrutec-lp h3{line-height:1.13;letter-spacing:-.005em;text-wrap:balance}#estrutec-lp p{max-width:67ch}#estrutec-lp h2{font-size:clamp(2rem,3.3vw,3rem);font-weight:700}#estrutec-lp h3{font-size:1.2rem;line-height:1.35;font-weight:700}#estrutec-lp em{font-style:normal;color:var(--orange)}#estrutec-lp img{max-width:100%}#estrutec-lp svg{display:block}#estrutec-lp .wrap{max-width:1280px;padding-inline:48px;margin-inline:auto}#estrutec-lp .skip{position:fixed;top:-100px;left:20px;padding:15px;z-index:50;background:#fff;color:#000}#estrutec-lp .skip:focus{top:10px}#estrutec-lp .header{background:var(--ink);color:#fff;border-bottom:1px solid var(--darkline);position:sticky;top:0;z-index:20}#estrutec-lp .header-inner{min-height:88px;display:flex;align-items:center;gap:30px;justify-content:space-between}#estrutec-lp .logo{width:210px;height:auto;display:block}#estrutec-lp .header nav{display:flex;gap:24px;font-size:14px}#estrutec-lp .header nav a{text-decoration:none;color:#d6d6d6;white-space:nowrap}#estrutec-lp .header nav a:hover{color:var(--orange)}#estrutec-lp .button{display:inline-flex;align-items:center;justify-content:space-between;gap:26px;background:var(--orange);color:#000000;text-decoration:none;padding:18px 24px;border-radius:3px;font-weight:800;font-size:15px;line-height:1.4;min-height:54px;transition:background .18s,transform .18s;font-family:inherit;border:0;cursor:pointer}#estrutec-lp .button:hover{background:#d59650}#estrutec-lp .button span,#estrutec-lp .text-link span{font-size:22px;line-height:1}#estrutec-lp .button.small{padding:13px 18px;min-height:46px;font-size:14px;white-space:nowrap}#estrutec-lp .button.dark{background:var(--ink);color:#fff}#estrutec-lp .button.dark:hover{background:#2a2a2a}#estrutec-lp .text-link{font-weight:800;text-decoration:none;display:inline-flex;align-items:center;gap:26px;font-size:15px;padding-block:12px;border-bottom:1px solid currentColor}#estrutec-lp .text-link:hover{border-bottom-color:var(--orange)}#estrutec-lp .hero{position:relative;background:var(--ink);color:#fff;overflow:hidden;isolation:isolate}#estrutec-lp .hero-bg{position:absolute;inset:0 0 0 auto;width:62%;z-index:-1}#estrutec-lp .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:60% 30%;filter:grayscale(55%) contrast(1.05)}#estrutec-lp .hero-bg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--ink) 0%,rgba(0,0,0,.88) 30%,rgba(0,0,0,.55) 70%,rgba(0,0,0,.7) 100%),linear-gradient(0deg,var(--ink) 0%,transparent 35%)}#estrutec-lp .hero:before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--orange)}#estrutec-lp .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;padding-block:72px 56px;align-items:center}#estrutec-lp .hero h1{font-size:clamp(2.7rem,5.2vw,4.9rem);font-weight:800;line-height:1.02;letter-spacing:-.005em;text-transform:uppercase;max-width:13ch}#estrutec-lp .hero h1 em{display:block}#estrutec-lp .hero-lead{color:#d3d3d3;font-size:clamp(1.05rem,1.4vw,1.25rem);line-height:1.55;margin:26px 0 24px;max-width:48ch}#estrutec-lp .stack{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px 0;align-items:center;margin-bottom:28px}#estrutec-lp .stack li{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:8px 12px;border:1px solid #ffffff33;border-radius:3px;background:#ffffff0d}#estrutec-lp .stack li+li{margin-left:26px;position:relative}#estrutec-lp .stack li+li:after{content:"+";position:absolute;left:-18px;top:50%;transform:translateY(-52%);color:var(--orange);font-size:18px;font-weight:800}#estrutec-lp .hero-cta-text{font-size:16px;font-weight:600;color:#fff;margin-bottom:16px;max-width:44ch}#estrutec-lp .trust-strip{display:grid;grid-template-columns:repeat(4,1fr);padding-block:24px;border-top:1px solid var(--darkline);color:#c2c2c2;font-size:14px}#estrutec-lp .trust-strip span+span{border-left:1px solid var(--darkline);padding-left:28px}#estrutec-lp .trust-strip strong{color:var(--orange);font-weight:700}#estrutec-lp .lead-panel{background:#fff;color:var(--ink);border-radius:4px;padding:30px;box-shadow:0 24px 60px #0007;border-top:4px solid var(--orange);scroll-margin-top:110px}#estrutec-lp .lead-panel h2{font-size:1.65rem;line-height:1.18;font-weight:800}#estrutec-lp .lead-panel>p{font-size:14px;color:var(--muted);margin:8px 0 18px}#estrutec-lp .form-fields{display:grid;grid-template-columns:1fr 1fr;gap:13px}#estrutec-lp .form-fields label{display:flex;flex-direction:column;gap:6px;font-weight:700;font-size:13px}#estrutec-lp .form-fields label:first-child,#estrutec-lp .form-fields label:nth-child(2),#estrutec-lp .form-fields label.wide{grid-column:1/-1}#estrutec-lp .form-fields input,#estrutec-lp .form-fields select{width:100%;min-width:0;font:400 16px Barlow,Arial,sans-serif;color:var(--ink);background:#fafafa;border:1px solid #adadad;border-radius:3px;padding:10px 12px;min-height:46px;caret-color:var(--ink)}#estrutec-lp .form-fields input::placeholder{color:#707070;font-size:14px}#estrutec-lp .form-fields input:focus,#estrutec-lp .form-fields select:focus{outline:2px solid var(--ink);outline-offset:2px}#estrutec-lp .form-privacy{font-size:12px;line-height:1.55;color:#606060;margin:14px 0}#estrutec-lp .lead-panel .button{width:100%;padding:16px;font-size:14px;min-height:52px}#estrutec-lp .lead-panel .button:disabled{cursor:wait;background:#edd2b4;color:#000000}#estrutec-lp .form-trap{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}#estrutec-lp .form-status:not(:empty){margin-top:14px;font-size:14px;font-weight:600;line-height:1.5}#estrutec-lp .form-status[data-state='error']{color:#000;border-left:3px solid var(--orange);padding-left:10px}#estrutec-lp .form-status[data-state='success']{color:#000;border-left:3px solid #000;padding-left:10px}#estrutec-lp .whatsapp-continue{display:block;font-weight:700;font-size:14px;margin-top:12px}#estrutec-lp .whatsapp-continue[hidden]{display:none}#estrutec-lp .section{padding-block:100px}#estrutec-lp .split{display:grid;grid-template-columns:1fr 1fr;gap:45px 95px}#estrutec-lp .section-intro{display:flex;align-items:flex-end;justify-content:space-between;gap:70px}#estrutec-lp .section-intro h2{flex:1.3}#estrutec-lp .section-intro h2 span{color:var(--orange)}#estrutec-lp .section-intro p{flex:1;color:var(--muted)}#estrutec-lp .benefit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0 38px;margin-top:55px}#estrutec-lp .benefit-grid article{border-top:1px solid var(--line);padding:30px 0 34px}#estrutec-lp .benefit-grid svg,#estrutec-lp .tech-list svg{width:40px;height:40px;fill:none;stroke:var(--orange);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;margin-bottom:20px}#estrutec-lp .benefit-grid h3{text-transform:uppercase;letter-spacing:.01em;font-size:1.1rem;margin-bottom:10px}#estrutec-lp .benefit-grid p{color:var(--muted);font-size:15px;max-width:34ch}#estrutec-lp .solutions{background:var(--alt)}#estrutec-lp .services{display:grid;grid-template-columns:repeat(3,1fr);gap:0 38px;margin-top:55px}#estrutec-lp .services article{border-top:1px solid #d0d0d0;padding-block:30px}#estrutec-lp .service-thumb{display:block;width:100%;height:230px;object-fit:cover;object-position:center 40%;border-radius:4px;margin-bottom:22px;filter:saturate(.82) contrast(1.03)}#estrutec-lp .services h3{max-width:24ch;margin-bottom:10px}#estrutec-lp .services p{color:var(--muted);font-size:15px}#estrutec-lp .tech-list{list-style:none;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0 30px;margin-top:40px}#estrutec-lp .tech-list li{border-top:1px solid #d0d0d0;padding-top:26px}#estrutec-lp .tech-list svg{width:34px;height:34px;margin-bottom:16px}#estrutec-lp .tech-list h3{font-size:1.05rem;margin-bottom:8px}#estrutec-lp .tech-list p{color:var(--muted);font-size:14px}#estrutec-lp .ai-band{margin-top:50px;padding:34px 38px;background:var(--dark);color:#fff;border-radius:4px;display:flex;align-items:center;justify-content:space-between;gap:40px}#estrutec-lp .ai-band h3{font-size:1.6rem;margin-bottom:10px}#estrutec-lp .ai-band p{color:#c7c7c7;font-size:15px}#estrutec-lp .ai-band .text-link{flex:none;color:var(--orange)}#estrutec-lp .ai-band .text-link:hover{color:#d59650}#estrutec-lp .problem h2 span,#estrutec-lp .process h2 span,#estrutec-lp .faq h2 span{color:#787878}#estrutec-lp .problem .split>div>p,#estrutec-lp .faq .split>div>p{margin-top:25px;color:var(--muted)}#estrutec-lp .problem-list{padding-top:6px}#estrutec-lp .problem-list p{margin:0;padding:19px 0;border-bottom:1px solid var(--line);font-size:18px;display:flex;align-items:center;gap:18px}#estrutec-lp .problem-list p:before{content:"";width:7px;height:7px;background:var(--orange);flex:0 0 7px}#estrutec-lp .cost{grid-column:1/-1;border-left:4px solid var(--orange);padding:6px 0 6px 28px}#estrutec-lp .cost h3{font-size:1.5rem;margin-bottom:12px}#estrutec-lp .cost p{color:var(--muted);max-width:80ch}#estrutec-lp .cost strong{display:block;margin-top:12px;font-size:17px}#estrutec-lp .conclusion{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:50px;background:var(--ink);color:#fff;padding:44px;border-radius:4px}#estrutec-lp .conclusion h3{font-size:clamp(1.6rem,2.6vw,2.3rem);font-weight:800;text-transform:uppercase;line-height:1.1;max-width:22ch;margin-bottom:16px}#estrutec-lp .conclusion p{color:#c7c7c7;font-size:15px}#estrutec-lp .conclusion .button{flex:none}#estrutec-lp .maintenance{background:var(--orange)}#estrutec-lp .maintenance-inner{display:flex;align-items:center;justify-content:space-between;gap:50px;padding-block:56px}#estrutec-lp .maintenance h2{font-size:clamp(1.8rem,3vw,2.6rem)}#estrutec-lp .maintenance p{margin-top:14px;color:#000000;font-size:15px;max-width:75ch}#estrutec-lp .maintenance .button{background:var(--ink);color:#fff;flex:none}#estrutec-lp .maintenance .button:hover{background:#2a2a2a}#estrutec-lp .maintenance .button:focus-visible{outline-color:var(--ink)}#estrutec-lp .why{background:var(--dark);color:#fff}#estrutec-lp .why .section-intro h2 span{color:var(--orange)}#estrutec-lp .why .section-intro p{color:#c7c7c7}#estrutec-lp .why-grid{list-style:none;counter-reset:why;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:0 38px;margin-top:55px}#estrutec-lp .why-grid li{counter-increment:why;border-top:1px solid #4d4d4d;padding:28px 0 32px}#estrutec-lp .why-grid li:before{content:"0" counter(why);display:block;font-size:14px;font-weight:800;color:var(--orange);margin-bottom:16px}#estrutec-lp .why-grid h3{text-transform:uppercase;font-size:1.1rem;letter-spacing:.01em;margin-bottom:10px}#estrutec-lp .why-grid p{color:#c7c7c7;font-size:15px}#estrutec-lp .pole{background:var(--alt)}#estrutec-lp .pole-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}#estrutec-lp .pole-photo{align-self:stretch;min-height:560px;border-radius:4px;overflow:hidden;background:var(--dark)}#estrutec-lp .pole-photo img{width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block}#estrutec-lp .pole-copy h2{font-size:clamp(2rem,3.4vw,3.1rem);text-transform:uppercase;font-weight:800}#estrutec-lp .pole-tagline{font-size:clamp(1.05rem,1.5vw,1.3rem);font-weight:700;line-height:1.4;margin:14px 0 20px}#estrutec-lp .pole-tagline span{color:var(--orange)}#estrutec-lp .pole-copy>p{color:var(--muted)}#estrutec-lp .pole-copy>h3{font-size:1rem;margin:28px 0 14px}#estrutec-lp .check-list{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px 28px}#estrutec-lp .check-list li{position:relative;padding-left:28px;font-size:15px;line-height:1.45}#estrutec-lp .check-list li:before{content:"";position:absolute;left:0;top:3px;width:16px;height:16px;border-radius:50%;background:var(--orange)}#estrutec-lp .check-list li:after{content:"";position:absolute;left:5px;top:7px;width:6px;height:3px;border-left:2px solid var(--ink);border-bottom:2px solid var(--ink);transform:rotate(-45deg)}#estrutec-lp .pole-copy .pole-note{margin:26px 0;padding:18px 20px;background:var(--dark);color:#edd2b4;font-weight:600;font-size:15px;border-radius:4px;max-width:none}#estrutec-lp .strategy{background:var(--ink);color:#fff;position:relative;overflow:hidden}#estrutec-lp .strategy h2{font-size:clamp(2.2rem,4.8vw,4.4rem);font-weight:800;text-transform:uppercase;line-height:1.02;letter-spacing:-.005em;max-width:20ch}#estrutec-lp .strategy h2 span{color:var(--orange)}#estrutec-lp .strategy-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:90px;margin-top:55px}#estrutec-lp .strategy-copy p{color:#c7c7c7;margin-bottom:20px}#estrutec-lp .strategy-copy .button{margin-top:10px}#estrutec-lp .audiences-title{font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--orange);margin-bottom:14px}#estrutec-lp .audiences article{display:grid;grid-template-columns:170px 1fr;gap:20px;border-top:1px solid #404040;padding:20px 0}#estrutec-lp .audiences p{color:#c7c7c7;font-size:14px}#estrutec-lp .steps{list-style:none;counter-reset:step;display:grid;grid-template-columns:repeat(5,1fr);padding:0;margin:55px 0 0;gap:0}#estrutec-lp .steps li{counter-increment:step;position:relative;padding:0 24px 0 0}#estrutec-lp .steps li:before{content:"0" counter(step);display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:var(--ink);color:var(--orange);font-size:17px;font-weight:800;margin-bottom:22px;position:relative;z-index:1}#estrutec-lp .steps li:after{content:"";position:absolute;top:28px;left:56px;right:0;height:2px;background:linear-gradient(90deg,var(--orange),#e4e4e4)}#estrutec-lp .steps li:last-child:after{display:none}#estrutec-lp .steps h3{text-transform:uppercase;font-size:1.05rem;letter-spacing:.02em;margin-bottom:10px}#estrutec-lp .steps p{font-size:14px;color:var(--muted);max-width:26ch}#estrutec-lp .process-close{margin-top:55px;padding-top:34px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:40px}#estrutec-lp .process-close p{font-size:clamp(1.15rem,1.8vw,1.5rem);line-height:1.4;max-width:48ch}#estrutec-lp .process-close strong{color:var(--orange)}#estrutec-lp .authority{background:var(--alt)}#estrutec-lp .region{display:grid;grid-template-columns:1fr 1fr;gap:40px 95px;align-items:end}#estrutec-lp .region h2 span{color:var(--orange)}#estrutec-lp .region p{color:var(--muted);margin-bottom:10px}#estrutec-lp .clients{margin-top:55px;border-top:1px solid #d0d0d0;padding-top:30px}#estrutec-lp .clients>p{font-size:14px;color:var(--muted)}#estrutec-lp .client-logos{display:grid;grid-template-columns:repeat(7,1fr);gap:30px;align-items:center;margin-top:25px}#estrutec-lp .client-logos img{width:130px;height:70px;object-fit:contain;filter:grayscale(1)}#estrutec-lp .google-reviews{margin-top:38px;padding-top:34px;border-top:1px solid #d0d0d0}#estrutec-lp .reviews-heading{display:flex;justify-content:space-between;gap:30px;align-items:end}#estrutec-lp .reviews-heading>div{display:grid;grid-template-columns:auto auto;align-items:center;gap:5px 14px}#estrutec-lp .google-label{grid-column:1/-1;font-size:14px;color:var(--muted)}#estrutec-lp .reviews-heading strong{font-size:2rem;line-height:1}#estrutec-lp .reviews-heading strong span{color:var(--orange);font-size:1rem;letter-spacing:2px}#estrutec-lp .reviews-heading small{color:var(--muted)}#estrutec-lp .reviews-heading a{font-size:13px;font-weight:700}#estrutec-lp .review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}#estrutec-lp .review-grid blockquote{margin:0;background:#fff;padding:24px;border-left:3px solid var(--orange);min-height:150px;display:flex;flex-direction:column;justify-content:space-between}#estrutec-lp .review-grid blockquote p{font-size:16px}#estrutec-lp .review-grid cite{font-size:12px;color:var(--muted);font-style:normal;margin-top:22px}#estrutec-lp .questions details{border-bottom:1px solid var(--line)}#estrutec-lp .questions details:first-child{border-top:1px solid var(--line)}#estrutec-lp summary{cursor:pointer;font-size:16px;font-weight:700;padding:22px 34px 22px 0;position:relative;list-style:none}#estrutec-lp summary::-webkit-details-marker{display:none}#estrutec-lp summary:after{content:"+";position:absolute;right:5px;font-size:23px;top:15px;color:var(--orange)}#estrutec-lp details[open] summary:after{content:"−"}#estrutec-lp .questions details p{font-size:15px;color:var(--muted);padding-bottom:23px;padding-right:25px}#estrutec-lp .final-cta{margin-top:90px;padding:54px;background:var(--orange);display:grid;grid-template-columns:1.5fr 1fr;align-items:center;gap:65px;border-radius:4px}#estrutec-lp .final-cta h2{font-size:clamp(2rem,3.4vw,3rem);font-weight:800;text-transform:uppercase;line-height:1.05}#estrutec-lp .final-cta p{color:#000000;margin-top:18px;font-size:15px}#estrutec-lp .final-action p{font-size:13px;max-width:30ch}#estrutec-lp .final-cta .button:focus-visible{outline-color:var(--ink);outline-offset:5px}#estrutec-lp .whatsapp-float{position:fixed;right:22px;bottom:22px;z-index:30;display:flex;align-items:center;gap:10px;background:#25d366;color:#fff;text-decoration:none;font-weight:800;font-size:14px;padding:13px 18px 13px 14px;border-radius:40px;box-shadow:0 10px 28px #0005;transition:transform .18s}#estrutec-lp .whatsapp-float:hover{transform:translateY(-2px)}#estrutec-lp .whatsapp-float svg{width:26px;height:26px;fill:#fff}#estrutec-lp .whatsapp-float:focus-visible{outline-color:var(--ink)}#estrutec-lp footer{background:var(--ink);color:#c9c9c9;padding-block:46px 90px}#estrutec-lp .footer-inner{display:grid;grid-template-columns:1fr 1.35fr auto;align-items:start;gap:55px}#estrutec-lp .footer-brand p,#estrutec-lp .footer-top{font-size:13px}#estrutec-lp .footer-brand p{margin-top:18px}#estrutec-lp .footer-contacts{display:flex;flex-direction:column;gap:7px;font-size:13px;font-style:normal;line-height:1.55}#estrutec-lp .footer-contacts strong{color:#fff;font-size:15px;margin-bottom:4px}#estrutec-lp .footer-contacts a{text-decoration:none}#estrutec-lp .footer-contacts a:hover,#estrutec-lp .footer-top:hover{color:var(--orange)}@media(max-width:1180px){#estrutec-lp .header nav{gap:16px;font-size:13px}#estrutec-lp .logo{width:180px}}@media(max-width:1050px){#estrutec-lp .wrap{padding-inline:30px}#estrutec-lp .header nav{display:none}#estrutec-lp .hero-grid{grid-template-columns:1fr 1fr;gap:36px}#estrutec-lp .hero-bg{width:100%}#estrutec-lp .section{padding-block:80px}#estrutec-lp .split,#estrutec-lp .region{gap:50px}#estrutec-lp .benefit-grid,#estrutec-lp .services,#estrutec-lp .why-grid{grid-template-columns:repeat(2,1fr)}#estrutec-lp .tech-list{grid-template-columns:repeat(2,1fr);gap:0 30px}#estrutec-lp .tech-list li{padding-bottom:24px}#estrutec-lp .pole-grid{gap:40px}#estrutec-lp .strategy-grid{gap:50px}#estrutec-lp .steps{grid-template-columns:repeat(3,1fr);row-gap:40px}#estrutec-lp .steps li:nth-child(3):after{display:none}#estrutec-lp .final-cta{gap:35px;padding:36px}#estrutec-lp .client-logos{gap:20px}}@media(max-width:860px){#estrutec-lp .hero-grid{grid-template-columns:1fr}#estrutec-lp .hero h1{max-width:none}#estrutec-lp .pole-grid,#estrutec-lp .strategy-grid{grid-template-columns:1fr}#estrutec-lp .pole-photo{min-height:420px}#estrutec-lp .ai-band,#estrutec-lp .conclusion,#estrutec-lp .maintenance-inner,#estrutec-lp .process-close{flex-direction:column;align-items:flex-start}}@media(max-width:760px){html{scroll-padding-top:80px}#estrutec-lp .wrap{padding-inline:22px}#estrutec-lp .header-inner{min-height:70px;gap:14px}#estrutec-lp .logo{width:150px}#estrutec-lp .button.small{font-size:12px;padding:11px 12px;min-height:44px;gap:10px}#estrutec-lp .button.small span{font-size:18px}#estrutec-lp .hero:before{width:4px}#estrutec-lp .hero-grid{gap:28px;padding-block:40px 32px}#estrutec-lp .hero h1{font-size:clamp(2.2rem,10.5vw,3rem)}#estrutec-lp .hero-lead{font-size:16px;margin:18px 0}#estrutec-lp .stack{gap:8px}#estrutec-lp .stack li{font-size:11px;padding:6px 9px}#estrutec-lp .stack li+li{margin-left:0}#estrutec-lp .stack li+li:after{display:none}#estrutec-lp .hero-cta-text{font-size:15px}#estrutec-lp .hero-copy>.button{width:100%}#estrutec-lp .trust-strip{grid-template-columns:1fr 1fr;gap:14px 20px;font-size:13px;padding-block:22px}#estrutec-lp .trust-strip span+span{padding-left:0;border:0}#estrutec-lp .lead-panel{padding:22px}#estrutec-lp .lead-panel h2{font-size:1.4rem}#estrutec-lp .lead-panel h2 br{display:none}#estrutec-lp .form-fields{gap:12px}#estrutec-lp .form-fields label{font-size:12px}#estrutec-lp .form-fields input,#estrutec-lp .form-fields select{padding:9px;min-height:44px}#estrutec-lp .section{padding-block:64px}#estrutec-lp .section-intro{display:block}#estrutec-lp .section-intro p{margin-top:20px}#estrutec-lp .split,#estrutec-lp .region{grid-template-columns:1fr;gap:30px}#estrutec-lp .benefit-grid,#estrutec-lp .why-grid,#estrutec-lp .services,#estrutec-lp .tech-list{grid-template-columns:1fr;margin-top:35px}#estrutec-lp .benefit-grid article{display:grid;grid-template-columns:44px 1fr;column-gap:16px;padding:22px 0}#estrutec-lp .benefit-grid svg{grid-row:span 2;width:34px;height:34px;margin:0}#estrutec-lp .service-thumb{height:200px}#estrutec-lp .ai-band,#estrutec-lp .conclusion{padding:28px 24px;gap:22px}#estrutec-lp .conclusion .button,#estrutec-lp .maintenance .button{width:100%}#estrutec-lp .cost{padding-left:20px}#estrutec-lp .problem-list p{font-size:16px}#estrutec-lp .maintenance-inner{padding-block:44px;gap:26px}#estrutec-lp .pole-photo{min-height:360px}#estrutec-lp .check-list{grid-template-columns:1fr}#estrutec-lp .pole-copy .button{width:100%}#estrutec-lp .strategy-grid{margin-top:35px;gap:40px}#estrutec-lp .strategy-copy .button{width:100%}#estrutec-lp .audiences article{grid-template-columns:1fr;gap:6px}#estrutec-lp .steps{grid-template-columns:1fr;row-gap:0;margin-top:35px}#estrutec-lp .steps li{display:grid;grid-template-columns:48px 1fr;column-gap:18px;padding:0 0 28px}#estrutec-lp .steps li:before{width:48px;height:48px;font-size:15px;margin:0;grid-row:span 2}#estrutec-lp .steps li:after,#estrutec-lp .steps li:nth-child(3):after{display:block;top:48px;bottom:0;left:23px;right:auto;width:2px;height:auto;background:#e4e4e4}#estrutec-lp .steps li:last-child:after{display:none}#estrutec-lp .steps h3{margin-top:12px}#estrutec-lp .process-close{margin-top:25px;gap:18px}#estrutec-lp .client-logos{grid-template-columns:repeat(3,1fr);gap:15px}#estrutec-lp .client-logos img{height:55px}#estrutec-lp .reviews-heading{align-items:start;flex-direction:column}#estrutec-lp .review-grid{grid-template-columns:1fr}#estrutec-lp .review-grid blockquote{min-height:0}#estrutec-lp .questions summary{font-size:15px}#estrutec-lp .final-cta{margin-top:55px;grid-template-columns:1fr;gap:26px;padding:28px}#estrutec-lp .final-action .button{width:100%}#estrutec-lp .footer-inner{grid-template-columns:1fr;gap:28px}#estrutec-lp .whatsapp-float{right:16px;bottom:16px;padding:13px}#estrutec-lp .whatsapp-float span{display:none}}@media(max-width:370px){#estrutec-lp .form-fields{grid-template-columns:1fr}#estrutec-lp .lead-panel{padding:18px}#estrutec-lp .logo{width:128px}#estrutec-lp .button.small{font-size:11px;gap:8px}#estrutec-lp .wrap{padding-inline:18px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}#estrutec-lp,#estrutec-lp *{transition:none!important}}@media print{#estrutec-lp .skip,#estrutec-lp .whatsapp-float{display:none!important}#estrutec-lp .header{position:static}}#estrutec-lp .location{margin-top:55px;padding:32px 36px;background:var(--ink);color:#fff;border-radius:4px;display:flex;align-items:center;justify-content:space-between;gap:40px}#estrutec-lp .location h3{font-size:1.4rem;margin-bottom:10px}#estrutec-lp .location address{font-style:normal;color:#c7c7c7;font-size:15px;line-height:1.6}#estrutec-lp .location .button{flex:none}#estrutec-lp .footer-contacts a b{color:var(--orange)}@media(max-width:760px){#estrutec-lp .location{flex-direction:column;align-items:flex-start;padding:26px 24px;gap:22px}#estrutec-lp .location .button{width:100%}}#estrutec-lp .location{flex-wrap:wrap}#estrutec-lp .location-map{flex:1 0 100%;height:460px;border-radius:4px;overflow:hidden;background:#1c1c1c}#estrutec-lp .location-map iframe{display:block;width:100%;height:100%;border:0}@media(max-width:760px){#estrutec-lp .location-map{flex:none;width:100%;height:420px}}#estrutec-lp .review-grid cite b{color:var(--ink);font-weight:800}#estrutec-lp .button.ghost{background:transparent;color:#fff;border:1px solid #ffffff55;justify-content:center;gap:10px}#estrutec-lp .button.ghost:hover{background:#ffffff14}#estrutec-lp .button svg,#estrutec-lp .ig-link svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;flex:none}#estrutec-lp .ig-link{display:flex;align-items:center;gap:8px}#estrutec-lp .location{gap:20px 24px}#estrutec-lp .location>div:first-child{margin-right:auto}@media(max-width:760px){#estrutec-lp .location .button.ghost{width:100%}}@media(max-width:760px){#estrutec-lp .stack li{font-size:12px}#estrutec-lp .footer-contacts a,#estrutec-lp .footer-top{display:flex;align-items:center;min-height:44px}#estrutec-lp .footer-contacts a[href*="maps"]{display:block;padding-block:8px}#estrutec-lp .footer-contacts{gap:0}#estrutec-lp .footer-contacts>span{padding-bottom:8px}}@media(max-width:370px){#estrutec-lp .button.small{font-size:12px;padding:11px 10px}#estrutec-lp .logo{width:120px}}#estrutec-lp .hero-brand{position:relative;padding-top:30px}#estrutec-lp .hero-brand .logo{width:210px}#estrutec-lp .hero-grid{padding-block:40px 52px}#estrutec-lp .hero-facts{border-top:1px solid var(--darkline);padding-block:24px}#estrutec-lp .hero-facts .stack{list-style:none;padding:0;margin:0 0 16px;display:flex;flex-wrap:wrap;align-items:center;gap:6px 0}#estrutec-lp .hero-facts .stack li{border:0;background:none;padding:0;margin:0;border-radius:0;font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#fff;white-space:nowrap}#estrutec-lp .hero-facts .stack li+li{margin-left:0}#estrutec-lp .hero-facts .stack li+li:after{display:none}#estrutec-lp .hero-facts .stack li+li:before{content:"+";color:var(--orange);font-size:18px;font-weight:800;margin-inline:14px;position:static;transform:none;display:inline}#estrutec-lp .hero-facts .trust-strip{padding:16px 0 0;border-top:1px solid #ffffff1f}#estrutec-lp .services{margin-bottom:0}#estrutec-lp .tech-cta{margin-top:20px;padding:30px 36px;background:var(--orange);border-radius:4px;display:flex;align-items:center;justify-content:space-between;gap:40px}#estrutec-lp .tech-cta h3{font-size:1.45rem;line-height:1.2;max-width:34ch;margin-bottom:8px}#estrutec-lp .tech-cta p{color:#000000;font-size:15px}#estrutec-lp .tech-cta .button{flex:none}#estrutec-lp .tech-cta .button:focus-visible{outline-color:var(--ink)}#estrutec-lp .tech-list{margin-top:48px}#estrutec-lp .strategy-copy .no-kits{display:block;color:#fff;font-weight:800;font-size:clamp(1.15rem,1.7vw,1.4rem);line-height:1.3}@media(max-width:1050px){#estrutec-lp .hero-grid{padding-block:32px 40px}}@media(max-width:860px){#estrutec-lp .tech-cta{flex-direction:column;align-items:flex-start;gap:20px}}@media(max-width:760px){#estrutec-lp .hero-brand{padding-top:20px}#estrutec-lp .hero-brand .logo{width:150px}#estrutec-lp .hero-grid{padding-block:24px 32px}#estrutec-lp .hero-facts{padding-block:20px}#estrutec-lp .hero-facts .stack li{font-size:12px;letter-spacing:.04em}#estrutec-lp .hero-facts .stack li+li:before{margin-inline:9px}#estrutec-lp .services article{display:grid;grid-template-columns:104px 1fr;column-gap:16px;align-items:start;padding-block:18px}#estrutec-lp .services .service-thumb{grid-row:span 2;width:104px;height:104px;margin:0}#estrutec-lp .services h3{font-size:16px;margin-bottom:6px}#estrutec-lp .services p{font-size:14px;line-height:1.5}#estrutec-lp .tech-cta{padding:24px}#estrutec-lp .tech-cta .button{width:100%}#estrutec-lp .tech-list{margin-top:32px}}@media(max-width:370px){#estrutec-lp .services article{grid-template-columns:88px 1fr;column-gap:12px}#estrutec-lp .services .service-thumb{width:88px;height:88px}#estrutec-lp .hero-brand .logo{width:128px}}#estrutec-lp .services article:nth-child(4) .service-thumb{object-position:center 30%}@media(max-width:760px){#estrutec-lp .services article:nth-child(4) .service-thumb{object-position:40% 32%}}#estrutec-lp .night{background:var(--ink);color:#fff}#estrutec-lp .night-grid{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1fr);gap:70px;align-items:center}#estrutec-lp .night-photo{position:relative;border-radius:4px;overflow:hidden;aspect-ratio:1/1;max-width:560px;width:100%}#estrutec-lp .night-photo img{width:100%;height:100%;object-fit:cover;display:block}#estrutec-lp .night-tag{position:absolute;bottom:16px;font-size:12px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:7px 12px;border-radius:3px;background:#111315d9;color:#fff;border:1px solid #ffffff33}#estrutec-lp .night-tag.left{left:16px}#estrutec-lp .night-tag.right{right:16px;color:var(--orange);border-color:var(--orange)}#estrutec-lp .night-copy h2{font-size:clamp(2rem,3.6vw,3.2rem);font-weight:800;text-transform:uppercase;line-height:1.05;letter-spacing:-.005em}#estrutec-lp .night-copy h2 span{color:var(--orange)}#estrutec-lp .night-copy>p{color:#c7c7c7;margin:22px 0 26px;font-size:17px}#estrutec-lp .night-copy .check-list{grid-template-columns:1fr;gap:14px;margin-bottom:34px}#estrutec-lp .night-copy .check-list li{font-size:16px}#estrutec-lp .night-copy .check-list li:after{border-color:var(--ink)}@media(max-width:860px){#estrutec-lp .night-grid{grid-template-columns:1fr;gap:36px}#estrutec-lp .night-photo{max-width:none}}@media(max-width:760px){#estrutec-lp .night-tag{font-size:10px;padding:6px 8px;bottom:10px}#estrutec-lp .night-tag.left{left:10px}#estrutec-lp .night-tag.right{right:10px}#estrutec-lp .night-copy .button{width:100%}}#estrutec-lp .cftv-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.95fr);gap:70px;align-items:center}#estrutec-lp .cftv-photo{border-radius:4px;overflow:hidden;aspect-ratio:1/1;max-width:560px;width:100%;justify-self:end}#estrutec-lp .cftv-photo img{width:100%;height:100%;object-fit:cover;display:block}#estrutec-lp .cftv-copy h2{font-size:clamp(2rem,3.6vw,3.2rem);font-weight:800;text-transform:uppercase;line-height:1.05;letter-spacing:-.005em}#estrutec-lp .cftv-copy h2 span{color:var(--orange)}#estrutec-lp .cftv-copy>p{color:var(--muted);margin:22px 0 26px;font-size:17px}#estrutec-lp .cftv-copy .check-list{grid-template-columns:1fr;gap:14px;margin-bottom:34px}#estrutec-lp .cftv-copy .check-list li{font-size:16px}@media(max-width:860px){#estrutec-lp .cftv-grid{grid-template-columns:1fr;gap:36px}#estrutec-lp .cftv-photo{max-width:none;justify-self:stretch;order:-1}}@media(max-width:760px){#estrutec-lp .cftv-copy .button{width:100%}}#estrutec-lp .services article:nth-child(5) .service-thumb{object-position:center 42%}#estrutec-lp .services article:nth-child(6) .service-thumb{object-position:center 85%}@media(max-width:760px){#estrutec-lp .services article:nth-child(5) .service-thumb{object-position:62% 45%}#estrutec-lp .services article:nth-child(6) .service-thumb{object-position:62% 70%}}#estrutec-lp .kit{background:var(--alt)}#estrutec-lp .kit-head{display:grid;grid-template-columns:1.1fr 1fr;gap:45px 95px;align-items:end}#estrutec-lp .kit-head h2{font-size:clamp(2rem,3.6vw,3.2rem);font-weight:800;text-transform:uppercase;line-height:1.05;letter-spacing:-.005em}#estrutec-lp .kit-head h2 span{color:var(--orange)}#estrutec-lp .kit-head p{color:var(--muted);font-size:17px}#estrutec-lp .kit-head .kit-strong{color:var(--ink);font-weight:800;margin-top:14px;font-size:clamp(1.1rem,1.6vw,1.3rem);line-height:1.3}#estrutec-lp .kit-steps{list-style:none;counter-reset:kit;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:0 38px;margin:50px 0 44px}#estrutec-lp .kit-steps li{counter-increment:kit;border-top:2px solid var(--ink);padding-top:22px}#estrutec-lp .kit-steps li:before{content:"0" counter(kit);display:block;color:var(--ink);font-weight:800;font-size:14px;margin-bottom:14px}#estrutec-lp .kit-steps h3{font-size:1.25rem;margin-bottom:8px}#estrutec-lp .kit-steps p{color:var(--muted);font-size:15px}@media(max-width:860px){#estrutec-lp .kit-head{grid-template-columns:1fr;gap:24px}}@media(max-width:760px){#estrutec-lp .kit-steps{grid-template-columns:1fr;gap:24px;margin:34px 0 30px}#estrutec-lp .kit .button{width:100%}}#estrutec-lp #lead-modal{border:0;padding:0;background:transparent;width:min(480px,calc(100% - 32px));max-width:none;max-height:calc(100dvh - 32px);overflow:visible;color:var(--ink)}#estrutec-lp #lead-modal::backdrop{background:#0009}#estrutec-lp #lead-modal .lead-panel{max-height:calc(100dvh - 32px);overflow:auto;box-shadow:0 30px 80px #0008;padding-top:44px}#estrutec-lp .modal-close{position:absolute;top:8px;right:8px;z-index:2;width:44px;height:44px;border:0;border-radius:50%;background:transparent;color:var(--ink);font:400 30px/1 Barlow,Arial,sans-serif;cursor:pointer}#estrutec-lp .modal-close:hover{background:var(--alt)}#estrutec-lp .modal-close:focus-visible{outline:3px solid var(--ink);outline-offset:0}body:has(#estrutec-lp #lead-modal[open]){overflow:hidden}@media(max-width:760px){#estrutec-lp #lead-modal .lead-panel{padding:44px 20px 20px}}#estrutec-lp .pole{background:var(--paper)}#estrutec-lp .clients-section .clients{margin-top:0;border-top:0;padding-top:0}#estrutec-lp .lead-panel .lead-submit{margin-top:20px}#estrutec-lp{--display:'Barlow Condensed','Arial Narrow',Arial,sans-serif}#estrutec-lp h1,#estrutec-lp h2,#estrutec-lp h3,#estrutec-lp .button,#estrutec-lp .text-link,#estrutec-lp summary,#estrutec-lp .stack li,#estrutec-lp .audiences-title,#estrutec-lp .night-tag,#estrutec-lp .trust-strip,#estrutec-lp .whatsapp-float,#estrutec-lp .google-label,#estrutec-lp .modal-close{font-family:var(--display)}#estrutec-lp h1,#estrutec-lp h2,#estrutec-lp h3{font-weight:700}#estrutec-lp .button{font-size:18px;letter-spacing:.02em;text-transform:uppercase}#estrutec-lp .button.small{font-size:16px}#estrutec-lp .text-link{font-size:17px;letter-spacing:.02em;text-transform:uppercase}#estrutec-lp .lead-panel .button{font-size:17px}#estrutec-lp summary{font-size:19px;font-weight:600}#estrutec-lp .stack li{font-size:15px}#estrutec-lp .trust-strip{font-size:16px;letter-spacing:.02em;text-transform:uppercase}#estrutec-lp .whatsapp-float{font-size:16px;letter-spacing:.02em;text-transform:uppercase}#estrutec-lp .benefit-grid h3,#estrutec-lp .why-grid h3,#estrutec-lp .steps h3{font-size:1.3rem}#estrutec-lp h3{font-size:1.4rem}#estrutec-lp .services h3,#estrutec-lp .tech-list h3{font-size:1.35rem}#estrutec-lp .problem-list p{font-size:20px}@media(max-width:760px){#estrutec-lp .button{font-size:17px}#estrutec-lp .button.small{font-size:15px}#estrutec-lp .stack li{font-size:14px}#estrutec-lp summary{font-size:18px}#estrutec-lp .services h3{font-size:1.2rem}}#estrutec-lp .hero h1{font-size:clamp(3.2rem,6.2vw,5.9rem);max-width:14ch;line-height:1}#estrutec-lp .hero-facts .stack li{font-size:17px}#estrutec-lp .trust-strip{font-size:17px}@media(max-width:760px){#estrutec-lp .hero h1{font-size:clamp(2.7rem,13vw,3.8rem);max-width:none}#estrutec-lp .hero-facts .stack li{font-size:15px}#estrutec-lp .trust-strip{font-size:16px}}#estrutec-lp .services article:nth-child(1) .service-thumb{object-position:62% 50%}@media(max-width:760px){#estrutec-lp .services article:nth-child(1) .service-thumb{object-position:70% 50%}}#estrutec-lp .services article:nth-child(2) .service-thumb{object-position:center 50%}#estrutec-lp .services article:nth-child(2) .service-thumb{object-position:center 95%}@media(max-width:1050px){#estrutec-lp .services article:nth-child(2) .service-thumb{object-position:center 100%}}@media(max-width:760px){#estrutec-lp .services article:nth-child(2) .service-thumb{object-position:center 80%}}@media(max-width:420px){#estrutec-lp .night-tag{font-size:9px;letter-spacing:0;padding:5px 6px;bottom:8px}#estrutec-lp .night-tag.left{left:8px}#estrutec-lp .night-tag.right{right:8px}}#estrutec-lp .services article:nth-child(4) .service-thumb{object-position:center 18%}@media(max-width:760px){#estrutec-lp .services article:nth-child(4) .service-thumb{object-position:center}}#estrutec-lp .cftv-photo{aspect-ratio:2/3;max-width:460px}#estrutec-lp .cftv-grid{grid-template-columns:minmax(0,1fr) minmax(0,460px)}@media(max-width:860px){#estrutec-lp .cftv-grid{grid-template-columns:1fr}#estrutec-lp .cftv-photo{max-width:420px;justify-self:center}}#estrutec-lp .services article:nth-child(3) .service-thumb{object-position:center}@media(max-width:760px){#estrutec-lp .services article:nth-child(3) .service-thumb{object-position:99% center}}#estrutec-lp .fence-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:70px;align-items:center}#estrutec-lp .fence-photo{border-radius:4px;overflow:hidden;aspect-ratio:16/9;width:100%}#estrutec-lp .fence-photo img{width:100%;height:100%;object-fit:cover;display:block}#estrutec-lp .fence-copy h2{font-size:clamp(2rem,3.6vw,3.2rem);font-weight:800;text-transform:uppercase;line-height:1.05}#estrutec-lp .fence-copy h2 span{color:var(--orange)}#estrutec-lp .fence-copy p{color:var(--muted);font-size:17px;margin-top:18px}#estrutec-lp .fence-copy .fence-lead{color:var(--ink);font-weight:600;font-size:19px;margin-top:22px}#estrutec-lp .fence-copy .button{margin-top:30px}@media(max-width:860px){#estrutec-lp .fence-grid{grid-template-columns:1fr;gap:34px}}@media(max-width:760px){#estrutec-lp .fence-copy .button{width:100%}}#estrutec-lp .fence{background:var(--alt)}#estrutec-lp .kit{background:var(--paper)}#estrutec-lp .whatsapp-float:hover{background:#1ebe5b}#estrutec-lp .whatsapp-float:focus-visible{outline-color:#000}#estrutec-lp .lead-panel .lead-submit{background:#25d366;color:#fff}#estrutec-lp .lead-panel .lead-submit:hover{background:#1ebe5b}#estrutec-lp .lead-panel .lead-submit:disabled{background:#9be3b8;color:#000}#estrutec-lp .lead-panel .lead-submit:focus-visible{outline-color:#000}#estrutec-lp .services article:nth-child(4) .service-thumb{object-position:center}@media(max-width:760px){#estrutec-lp .services article:nth-child(4) .service-thumb{object-position:78% center}}#estrutec-lp .tech-list{grid-template-columns:repeat(2,1fr);gap:0 38px}#estrutec-lp .tech-list p{font-size:15px;max-width:44ch}@media(max-width:760px){#estrutec-lp .tech-list{grid-template-columns:1fr}}#estrutec-lp .tech-list{grid-template-columns:repeat(3,1fr);gap:0 38px}#estrutec-lp .tech-list h3 .kw{display:block;font-size:1.1rem;font-weight:600;color:var(--orange);margin-top:2px}@media(max-width:1050px){#estrutec-lp .tech-list{grid-template-columns:repeat(2,1fr)}}@media(max-width:760px){#estrutec-lp .tech-list{grid-template-columns:1fr}}#estrutec-lp .pole-gov{margin:26px 0 0;padding:22px 24px;border:2px solid var(--ink);border-radius:4px;background:#fff}#estrutec-lp .pole-copy .pole-gov>h3{margin:0 0 6px;font-size:1.25rem;text-transform:uppercase}#estrutec-lp .pole-gov p{font-size:15px;margin:0 0 14px;color:var(--muted)}#estrutec-lp .gov-list{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:10px}#estrutec-lp .gov-list li{font-family:var(--display);font-weight:800;font-size:1.25rem;letter-spacing:.02em;text-transform:uppercase;padding:8px 16px;border-radius:3px;background:var(--ink);color:#fff;border-bottom:4px solid var(--orange)}@media(max-width:760px){#estrutec-lp .pole-gov{padding:18px}#estrutec-lp .gov-list li{font-size:1.1rem;padding:7px 12px}}#estrutec-lp .clients-section .clients{margin-top:0;border-top:0;padding-top:0}#estrutec-lp .clients-title{font-size:clamp(1.6rem,2.6vw,2.2rem);font-weight:800;text-transform:uppercase;margin-bottom:26px}#estrutec-lp .client-logos{grid-template-columns:repeat(4,1fr);gap:18px;margin-top:0}#estrutec-lp .client-logos>div{background:#fff;border-radius:4px;aspect-ratio:3/2;display:flex;align-items:center;justify-content:center;padding:14px}#estrutec-lp .client-logos img{width:100%;height:100%;max-width:none;object-fit:contain;filter:none}#estrutec-lp .clients-section .google-reviews{margin-top:56px;padding-top:44px;border-top:1px solid #d0d0d0}@media(max-width:760px){#estrutec-lp .client-logos{grid-template-columns:1fr 1fr;gap:12px}#estrutec-lp .client-logos img{height:100%}#estrutec-lp .clients-section .google-reviews{margin-top:40px;padding-top:32px}}#estrutec-lp .tech-list .tech-photo{display:block;width:100%;height:230px;object-fit:cover;object-position:center 70%;border-radius:4px;margin-bottom:18px}@media(max-width:760px){#estrutec-lp .tech-list .tech-photo{height:200px;object-position:center 75%}}#estrutec-lp .tech-list .tech-photo{height:auto;aspect-ratio:1/1;object-position:center}@media(max-width:760px){#estrutec-lp .tech-list .tech-photo{height:auto;aspect-ratio:1/1;max-width:420px;object-position:center}}#estrutec-lp .tech-list .tech-photo-wide{aspect-ratio:16/9}@media(max-width:760px){#estrutec-lp .tech-list .tech-photo-wide{max-width:none}}#estrutec-lp .tech-list .tech-photo,#estrutec-lp .tech-list .tech-photo-wide{aspect-ratio:16/10;height:auto;max-width:none;object-fit:cover}#estrutec-lp .tech-list .tech-photo-wide{object-position:100% 50%}#estrutec-lp .tech-list li:nth-child(2) .tech-photo{object-position:50% 100%}@media(max-width:760px){#estrutec-lp .tech-list .tech-photo,#estrutec-lp .tech-list .tech-photo-wide{max-width:none}}#estrutec-lp .tech-list li:nth-child(3) .tech-photo{object-position:100% 50%}@media(min-width:761px) and (max-width:1050px){#estrutec-lp .tech-list{grid-template-columns:repeat(3,1fr);gap:0 20px}#estrutec-lp .tech-list p{font-size:14px}}#estrutec-lp .tech-list h3 .kw{display:inline;font-size:inherit;margin:0}#estrutec-lp .benefits[hidden]{display:none!important}#estrutec-lp .footer-contacts a.footer-phone{display:flex;align-items:center;gap:12px;color:var(--orange);font-family:var(--display);font-weight:800;font-size:1.9rem;line-height:1.05;margin:6px 0}#estrutec-lp .footer-phone svg{width:30px;height:30px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}#estrutec-lp .footer-phone small{display:block;font-family:Barlow,Arial,sans-serif;font-weight:600;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:#c7c7c7;margin-bottom:2px}#estrutec-lp .footer-contacts a.footer-phone:hover{color:#fff}#estrutec-lp .button.phone-btn{background:#fff;color:#000;justify-content:center;gap:10px}#estrutec-lp .button.phone-btn:hover{background:var(--orange)}#estrutec-lp .button.phone-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}@media(max-width:760px){#estrutec-lp .footer-contacts a.footer-phone{min-height:56px;font-size:2rem}#estrutec-lp .location .button.phone-btn{width:100%}}#estrutec-lp .client-logos{grid-template-columns:repeat(3,1fr)}@media(max-width:760px){#estrutec-lp .client-logos{grid-template-columns:1fr 1fr}}#estrutec-lp .client-logos img[alt^="Inkcor"]{width:auto;height:auto;max-width:100px;max-height:86px;margin:auto}#estrutec-lp .strategy h2{font-size:clamp(2rem,4.2vw,3.8rem);max-width:24ch}#estrutec-lp .pole-copy>h3.pole-q{font-family:var(--display);font-size:1.5rem;text-transform:uppercase;margin:30px 0 10px}#estrutec-lp .pole-copy>h3.pole-q+p{margin-top:0}#estrutec-lp .benefit-list{list-style:none;padding:0;display:grid;gap:14px}#estrutec-lp .benefit-list li{position:relative;padding-left:28px;font-size:16px;line-height:1.5;color:var(--muted)}#estrutec-lp .benefit-list li:before{content:"";position:absolute;left:0;top:6px;width:14px;height:14px;border-radius:50%;background:var(--orange)}#estrutec-lp .benefit-list strong{color:var(--ink);font-weight:700}#estrutec-lp .pole-copy>h3.pole-q+p+p{margin-top:14px}#estrutec-lp .gate{background:var(--alt)}#estrutec-lp .gate-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:70px;align-items:center}#estrutec-lp .gate-photo{border-radius:4px;overflow:hidden;aspect-ratio:3/2;width:100%}#estrutec-lp .gate-photo img{width:100%;height:100%;object-fit:cover;display:block}#estrutec-lp .gate-copy h2{font-size:clamp(2rem,3.6vw,3.2rem);font-weight:800;text-transform:uppercase;line-height:1.05}#estrutec-lp .gate-copy h2 span{color:var(--orange)}#estrutec-lp .gate-copy p{color:var(--muted);font-size:17px;margin-top:16px}#estrutec-lp .gate-copy .gate-lead{color:var(--ink);font-weight:600;font-size:19px;margin-top:22px}#estrutec-lp .gate-copy .button{margin-top:28px}@media(max-width:860px){#estrutec-lp .gate-grid{grid-template-columns:1fr;gap:34px}}@media(max-width:760px){#estrutec-lp .gate-copy .button{width:100%}}#estrutec-lp .fence{background:var(--ink);color:#fff}#estrutec-lp .fence-copy h2{color:#fff}#estrutec-lp .fence-copy h2 span{color:var(--orange)}#estrutec-lp .fence-copy p{color:#d6d6d6}#estrutec-lp .fence-copy .fence-lead{color:#fff}#estrutec-lp .gov-logos{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}#estrutec-lp .gov-logos li{aspect-ratio:3/2;border:1px solid #d0d0d0;border-radius:4px;overflow:hidden;background:#fff;display:flex;align-items:center;justify-content:center}#estrutec-lp .gov-logos img{width:100%;height:100%;object-fit:contain;display:block}#estrutec-lp .gov-logos li:first-child img{object-fit:cover}@media(max-width:760px){#estrutec-lp .gov-logos{grid-template-columns:1fr 1fr;gap:10px}#estrutec-lp .gov-logos li:last-child{grid-column:1/-1;aspect-ratio:3/1.3}}#estrutec-lp .night-fc{margin:0 0 26px;padding:18px 20px;border-left:4px solid var(--orange);background:#121212}#estrutec-lp .night-copy .night-fc h3{font-family:var(--display);font-size:1.35rem;text-transform:uppercase;color:var(--orange);margin-bottom:6px}#estrutec-lp .night-copy .night-fc p{margin:0;font-size:16px;color:#e4e4e4}#estrutec-lp .night-photo{background:#000}#estrutec-lp .night-photo video{width:100%;height:100%;object-fit:cover;display:block;background:#000}#estrutec-lp .footer-credits{margin-top:34px;padding-top:22px;border-top:1px solid var(--darkline);font-size:13px;color:#c2c2c2}#estrutec-lp .footer-credits p{max-width:none}#estrutec-lp .footer-credits a{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:3px;display:inline-block;padding-block:6px}#estrutec-lp .footer-credits a:hover{color:var(--orange)}@media(max-width:760px){#estrutec-lp .footer-credits{text-align:left}}#estrutec-lp h1,#estrutec-lp h2,#estrutec-lp h3,#estrutec-lp h4{color:inherit;text-shadow:none}#estrutec-lp li{margin:0}#estrutec-lp img{border:0;box-shadow:none}#estrutec-lp a{box-shadow:none}#estrutec-lp p{margin-bottom:0;font-size:inherit}#estrutec-lp li,#estrutec-lp address{font-size:inherit}#estrutec-lp .button{text-decoration:none!important;box-shadow:none!important}</style>
 <div id="estrutec-lp">
 <a class="skip" href="#conteudo">Ir para o conteúdo</a>
 <main id="conteudo">
-
 <section class="hero" id="inicio">
   <div class="hero-bg" aria-hidden="true"><img src="https://cdn.jsdelivr.net/gh/viniciusgestortrafego-stack/estrutec@7f52102d3a68837c69e37e772f532509e68f5ef4/outputs/dist/assets/monitoramento-24h.webp" alt="" fetchpriority="high"></div>
   <div class="wrap hero-brand"><a href="#inicio" aria-label="Estrutec Monitoramento — início"><img class="logo" src="https://cdn.jsdelivr.net/gh/viniciusgestortrafego-stack/estrutec@7f52102d3a68837c69e37e772f532509e68f5ef4/outputs/dist/assets/logo.png" alt="Estrutec Monitoramento" width="407" height="85"></a></div>
@@ -782,7 +40,6 @@ body:has(#estrutec-lp #lead-modal[open]){overflow:hidden}
   <ul class="stack" aria-label="O que a solução reúne"><li>Câmeras inteligentes</li><li>Alarmes</li><li>Controle de acesso</li><li>Monitoramento</li><li>Manutenção</li></ul>
   <div class="trust-strip"><span>Monitoramento <strong>24 horas</strong></span><span>Central <strong>própria</strong></span><span>Manutenção <strong>preventiva</strong></span><span>Projetos <strong>personalizados</strong></span></div></div>
 </section>
-
 <!-- Seção "O que a Estrutec entrega para você" oculta por enquanto: remova o atributo hidden para exibir. -->
 <section class="section benefits" id="entregas" hidden><div class="wrap">
   <div class="section-intro"><h2>O que a Estrutec <span>entrega para você.</span></h2><p>Mais do que equipamentos instalados: uma estrutura de segurança pensada para dar controle, visibilidade e tranquilidade à sua operação.</p></div>
@@ -795,7 +52,6 @@ body:has(#estrutec-lp #lead-modal[open]){overflow:hidden}
     <article><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg><h3>Mais praticidade</h3><p>Acompanhe sua operação de onde estiver, conforme a solução contratada.</p></article>
   </div>
 </div></section>
-
 <section class="section solutions" id="tecnologias"><div class="wrap">
   <div class="section-intro"><h2>As tecnologias que<br><span>trabalham por você.</span></h2><p>Combinamos diferentes tecnologias para construir uma estrutura de segurança de acordo com a sua necessidade.</p></div>
   <div class="services">
@@ -812,7 +68,6 @@ body:has(#estrutec-lp #lead-modal[open]){overflow:hidden}
     <li class="has-photo"><img class="tech-photo tech-photo-wide" src="https://cdn.jsdelivr.net/gh/viniciusgestortrafego-stack/estrutec@7f52102d3a68837c69e37e772f532509e68f5ef4/outputs/dist/assets/gerador-neblina.webp" alt="Névoa densa preenchendo uma sala de caixas eletrônicos, com o logotipo da Estrutec" loading="lazy"><div><h3>Gerador de neblina <span class="kw">(fumaça anti furto)</span></h3><p>Equipamento de segurança antirroubo que preenche o ambiente com uma névoa densa e opaca em poucos segundos para cegar e desorientar invasores.</p></div></li>
   </ul>
 </div></section>
-
 <section class="section cftv" id="cftv"><div class="wrap cftv-grid">
   <div class="cftv-copy">
     <h2>O que é <span>CFTV?</span></h2>
@@ -826,7 +81,6 @@ body:has(#estrutec-lp #lead-modal[open]){overflow:hidden}
   </div>
   <div class="cftv-photo"><img src="https://cdn.jsdelivr.net/gh/viniciusgestortrafego-stack/estrutec@7f52102d3a68837c69e37e772f532509e68f5ef4/outputs/dist/assets/cftv-fabrica.webp" alt="Câmera de segurança detectando uma pessoa na entrada de uma fábrica, com as imagens das câmeras no celular e o logotipo da Estrutec" loading="lazy"></div>
 </div></section>
-
 <section class="section gate" id="portaria-autonoma"><div class="wrap gate-grid">
   <div class="gate-photo"><img src="https://cdn.jsdelivr.net/gh/viniciusgestortrafego-stack/estrutec@7f52102d3a68837c69e37e772f532509e68f5ef4/outputs/dist/assets/portaria-autonoma.webp" alt="Carro passando por uma cancela com câmera de segurança e placa de acesso controlado, com o logotipo da Estrutec" loading="lazy"></div>
   <div class="gate-copy">
@@ -838,7 +92,6 @@ body:has(#estrutec-lp #lead-modal[open]){overflow:hidden}
     <a class="button" data-whatsapp href="https://wa.me/551196278767?text=Ol%C3%A1%20vi%20dos%20an%C3%BAncios%20e%20quero%20fazer%20um%20or%C3%A7amento" target="_blank" rel="noopener noreferrer">Quero uma portaria autônoma <span aria-hidden="true">↗</span></a>
   </div>
 </div></section>
-
 <section class="section night" id="visao-noturna"><div class="wrap night-grid">
   <div class="night-photo"><video controls playsinline preload="metadata" poster="https://cdn.jsdelivr.net/gh/viniciusgestortrafego-stack/estrutec@7f52102d3a68837c69e37e772f532509e68f5ef4/outputs/dist/assets/colorvu-poster.jpg" aria-label="Vídeo: câmera ColorVu da Estrutec mostrando imagens coloridas à noite, comparada à visão noturna em preto e branco"><source src="https://cdn.jsdelivr.net/gh/viniciusgestortrafego-stack/estrutec@7f52102d3a68837c69e37e772f532509e68f5ef4/outputs/dist/assets/colorvu.mp4" type="video/mp4">Seu navegador não reproduz vídeos. <a href="https://cdn.jsdelivr.net/gh/viniciusgestortrafego-stack/estrutec@7f52102d3a68837c69e37e772f532509e68f5ef4/outputs/dist/assets/colorvu.mp4">Baixe o vídeo</a>.</video></div>
   <div class="night-copy">
@@ -854,7 +107,6 @@ body:has(#estrutec-lp #lead-modal[open]){overflow:hidden}
     <a class="button" data-whatsapp href="https://wa.me/551196278767?text=Ol%C3%A1%20vi%20dos%20an%C3%BAncios%20e%20quero%20fazer%20um%20or%C3%A7amento" target="_blank" rel="noopener noreferrer">Quero enxergar melhor à noite <span aria-hidden="true">↗</span></a>
   </div>
 </div></section>
-
 <section class="section pole" id="poste-inteligente"><div class="wrap pole-grid">
   <div class="pole-photo"><img src="https://cdn.jsdelivr.net/gh/viniciusgestortrafego-stack/estrutec@7f52102d3a68837c69e37e772f532509e68f5ef4/outputs/dist/assets/poste-inteligente.webp" alt="Poste Inteligente Estrutec com câmeras de segurança e sinalizador" loading="lazy"></div>
   <div class="pole-copy">
@@ -888,7 +140,6 @@ body:has(#estrutec-lp #lead-modal[open]){overflow:hidden}
     <a class="button" data-whatsapp href="https://wa.me/551196278767?text=Ol%C3%A1%20vi%20dos%20an%C3%BAncios%20e%20quero%20fazer%20um%20or%C3%A7amento" target="_blank" rel="noopener noreferrer">Quero o Poste Inteligente <span aria-hidden="true">↗</span></a>
   </div>
 </div></section>
-
 <section class="section fence" id="cerca-eletrica"><div class="wrap fence-grid">
   <div class="fence-photo"><img src="https://cdn.jsdelivr.net/gh/viniciusgestortrafego-stack/estrutec@7f52102d3a68837c69e37e772f532509e68f5ef4/outputs/dist/assets/cerca-eletrica.webp" alt="Cerca elétrica no muro de uma casa ao pôr do sol, com câmera de segurança e o logotipo da Estrutec" loading="lazy"></div>
   <div class="fence-copy">
@@ -899,7 +150,6 @@ body:has(#estrutec-lp #lead-modal[open]){overflow:hidden}
     <a class="button" data-whatsapp href="https://wa.me/551196278767?text=Ol%C3%A1%20vi%20dos%20an%C3%BAncios%20e%20quero%20fazer%20um%20or%C3%A7amento" target="_blank" rel="noopener noreferrer">Quero um projeto completo <span aria-hidden="true">↗</span></a>
   </div>
 </div></section>
-
 <section class="section kit" id="kit-personalizado"><div class="wrap">
   <div class="kit-head">
     <h2>Kit de alarme <span>totalmente personalizado.</span></h2>
@@ -915,7 +165,6 @@ body:has(#estrutec-lp #lead-modal[open]){overflow:hidden}
   </ol>
   <a class="button" data-whatsapp href="https://wa.me/551196278767?text=Ol%C3%A1%20vi%20dos%20an%C3%BAncios%20e%20quero%20fazer%20um%20or%C3%A7amento" target="_blank" rel="noopener noreferrer">Quero um kit personalizado <span aria-hidden="true">↗</span></a>
 </div></section>
-
 <section class="section strategy"><div class="wrap">
   <h2>Sua empresa está comprando equipamentos <span>ou realmente construindo segurança?</span></h2>
   <div class="strategy-grid">
@@ -926,19 +175,16 @@ body:has(#estrutec-lp #lead-modal[open]){overflow:hidden}
     <div class="audiences"><p class="audiences-title">Qual é a sua necessidade?</p><article><h3>Empresas e indústrias</h3><p>Proteja patrimônio, operação e pessoas com CFTV, IA, alarmes, controle de acesso, monitoramento e manutenção.</p></article><article><h3>Condomínios</h3><p>Tecnologias integradas para controle e segurança dos espaços compartilhados, residenciais ou empresariais.</p></article><article><h3>Comércios e estoques</h3><p>Mais visibilidade, controle e prevenção de perdas.</p></article><article><h3>Residências</h3><p>Uma solução planejada para as necessidades da sua casa.</p></article><article><h3>Áreas públicas</h3><p>Postes inteligentes e monitoramento para apoiar a segurança em vias e espaços públicos.</p></article></div>
   </div>
 </div></section>
-
 <section class="section authority clients-section" id="clientes"><div class="wrap">
   <div class="clients"><h2 class="clients-title">Marcas que a Estrutec atende</h2><div class="client-logos"><div><img src="https://cdn.jsdelivr.net/gh/viniciusgestortrafego-stack/estrutec@7f52102d3a68837c69e37e772f532509e68f5ef4/outputs/dist/assets/cliente-betterfood.jpg" alt="Betterfood" loading="lazy"></div><div><img src="https://cdn.jsdelivr.net/gh/viniciusgestortrafego-stack/estrutec@7f52102d3a68837c69e37e772f532509e68f5ef4/outputs/dist/assets/cliente-recycling-novo.png" alt="Recycling" loading="lazy"></div><div><img src="https://cdn.jsdelivr.net/gh/viniciusgestortrafego-stack/estrutec@7f52102d3a68837c69e37e772f532509e68f5ef4/outputs/dist/assets/cliente-valeo-novo.png" alt="Valeo" loading="lazy"></div><div><img src="https://cdn.jsdelivr.net/gh/viniciusgestortrafego-stack/estrutec@7f52102d3a68837c69e37e772f532509e68f5ef4/outputs/dist/assets/cliente-inkcor.png" alt="Inkcor Tintas Premium" loading="lazy"></div><div><img src="https://cdn.jsdelivr.net/gh/viniciusgestortrafego-stack/estrutec@7f52102d3a68837c69e37e772f532509e68f5ef4/outputs/dist/assets/cliente-noviplasti.png" alt="Noviplasti Plásticos e Embalagens" loading="lazy"></div><div><img src="https://cdn.jsdelivr.net/gh/viniciusgestortrafego-stack/estrutec@7f52102d3a68837c69e37e772f532509e68f5ef4/outputs/dist/assets/cliente-fercom.png" alt="Fercom" loading="lazy"></div></div>
   <div class="google-reviews"><div class="reviews-heading"><div><span class="google-label">Avaliações no Google</span><strong>5,0 <span aria-label="5 estrelas">★★★★★</span></strong><small>7 avaliações no Google</small></div><a href="https://www.google.com/search?q=estrutec+monitoramento" target="_blank" rel="noopener noreferrer">Ver perfil no Google ↗</a></div><div class="review-grid"><blockquote><p>“Atendimento imediato, sem robôs, irritação e perda de tempo. Recomendo.”</p><cite><b>Saccaro</b> · Google, mar. 2025</cite></blockquote><blockquote><p>“A melhor empresa de segurança eletrônica!! Obrigado pelos serviços!!! Sempre em prontos para nos ajudar em qualquer situação!!! Super recomendo!!!”</p><cite><b>Paulo Filho</b> · Google, mar. 2025</cite></blockquote><blockquote><p>“Foi muito bom! Técnicos extremamente profissionais e qualificados!”</p><cite><b>Thiago Gonçalves</b> · Google, mar. 2025</cite></blockquote><blockquote><p>“Somos sempre muito bem atendidos pela equipe da Estrutec, que nos fornece um serviço muito bom!”</p><cite><b>Carlito Souto</b> · Google, fev. 2025</cite></blockquote><blockquote><p>“A melhor empresa de segurança e monitoramento, tratamento humano. Recomendo!”</p><cite><b>Junior Dejane</b> · Google, fev. 2025</cite></blockquote><blockquote><p>“Sempre atenciosos e dedicados.”</p><cite><b>Patrícia Lopes</b> · Google, fev. 2025</cite></blockquote></div></div></div>
 </div></section>
-
 <section class="section problem"><div class="wrap split">
   <div><h2>O problema não é ter câmeras. É descobrir que elas falharam <span>quando você mais precisava.</span></h2><p>Ver uma imagem pelo celular não significa necessariamente que todo o sistema esteja funcionando como deveria.</p><p>Muitas falhas só aparecem <strong>depois de uma ocorrência.</strong></p></div>
   <div class="problem-list"><p>Uma câmera fora de posição (ponto cego).</p><p>Uma gravação que parou.</p><p>Uma falha no armazenamento.</p><p>Uma visão noturna que não funciona.</p></div>
   <div class="cost"><h3>Quanto pode custar uma falha de segurança?</h3><p>Uma câmera sem gravação. Um equipamento fora de operação. Um ponto cego. Um acesso não autorizado. Um furto. Uma invasão. Uma operação interrompida.</p><strong>O custo de uma ocorrência pode ser muito maior do que o investimento em prevenção.</strong></div>
   <div class="conclusion"><div><h3>Ter câmeras não é o mesmo que ter um sistema de segurança confiável.</h3><p>A Estrutec pode avaliar seu sistema, identificar vulnerabilidades e propor melhorias de acordo com a realidade do seu espaço. Conforme o escopo, a avaliação pode considerar câmeras, gravação, pontos cegos, alarmes, controle de acesso, comunicação, armazenamento e integração.</p></div><a class="button" data-whatsapp href="https://wa.me/551196278767?text=Ol%C3%A1%20vi%20dos%20an%C3%BAncios%20e%20quero%20fazer%20um%20or%C3%A7amento" target="_blank" rel="noopener noreferrer">Avaliar minha segurança <span aria-hidden="true">↗</span></a></div>
 </div></section>
-
 <section class="section why" id="por-que"><div class="wrap">
   <div class="section-intro"><h2>Por que contratar <span>a Estrutec?</span></h2><p>Da avaliação ao acompanhamento diário, você conta com uma única empresa responsável pela sua segurança.</p></div>
   <ol class="why-grid">
@@ -950,7 +196,6 @@ body:has(#estrutec-lp #lead-modal[open]){overflow:hidden}
     <li><h3>Manutenção preventiva</h3><p>Não basta instalar e esquecer. Oferecemos planos de manutenção preventiva para manter o sistema em condições adequadas de operação.</p></li>
   </ol>
 </div></section>
-
 <section class="section process" id="como-funciona"><div class="wrap">
   <h2>Do diagnóstico<br><span>ao monitoramento.</span></h2>
   <ol class="steps">
@@ -962,12 +207,10 @@ body:has(#estrutec-lp #lead-modal[open]){overflow:hidden}
   </ol>
   <div class="process-close"><p>Você não compra simplesmente um equipamento. <strong>A Estrutec acompanha a construção da solução.</strong></p><a class="text-link" data-whatsapp href="https://wa.me/551196278767?text=Ol%C3%A1%20vi%20dos%20an%C3%BAncios%20e%20quero%20fazer%20um%20or%C3%A7amento" target="_blank" rel="noopener noreferrer">Começar pelo diagnóstico <span aria-hidden="true">↗</span></a></div>
 </div></section>
-
 <section class="section authority" id="atendimento"><div class="wrap">
   <div class="region"><h2>Atendimento em <span>São Paulo.</span></h2><div><p>Atendemos a Grande São Paulo e região, com clientes também no interior do estado. Entre as cidades atendidas estão Guarulhos, Mogi das Cruzes, Arujá e Campinas.</p><a class="text-link" data-whatsapp href="https://wa.me/551196278767?text=Ol%C3%A1%20vi%20dos%20an%C3%BAncios%20e%20quero%20fazer%20um%20or%C3%A7amento" target="_blank" rel="noopener noreferrer">Consulte sua região <span aria-hidden="true">↗</span></a></div></div>
   <div class="location"><div><h3>Onde estamos</h3><address>Estrutec Monitoramento<br>R. Barão de Penedo, 469 - Cidade Satélite<br>Guarulhos - SP, 07222-015</address></div><a class="button" href="https://www.google.com/maps/dir/?api=1&destination=Estrutec%20Monitoramento%2C%20R.%20Bar%C3%A3o%20de%20Penedo%2C%20469%20-%20Cidade%20Sat%C3%A9lite%2C%20Guarulhos%20-%20SP%2C%2007222-015" target="_blank" rel="noopener noreferrer">Traçar rota <span aria-hidden="true">↗</span></a><a class="button phone-btn" href="tel:+551150393499"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>Ligar: (11) 5039-3499</a><a class="button ghost" href="https://www.instagram.com/estrutecmonitoramento/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>Seguir no Instagram</a><div class="location-map"><iframe src="https://www.google.com/maps?q=Estrutec%20Monitoramento%2C%20R.%20Bar%C3%A3o%20de%20Penedo%2C%20469%20-%20Cidade%20Sat%C3%A9lite%2C%20Guarulhos%20-%20SP%2C%2007222-015&hl=pt-BR&z=16&output=embed" title="Mapa com a localização da Estrutec Monitoramento" width="100%" height="100%" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div></div>
 </div></section>
-
 <section class="section faq" id="duvidas"><div class="wrap"><div class="split"><div><h2>Antes de investir em mais equipamentos, descubra o que sua segurança <span>realmente precisa.</span></h2><p>Respostas para você dar o próximo passo com mais clareza.</p></div><div class="questions">
 <details><summary>Quais tipos de locais a Estrutec atende?</summary><p>Atendemos indústrias, empresas, comércios, condomínios residenciais e empresariais, galpões, estoques, escolas, consultórios, estacionamentos, franquias, residências e áreas públicas.</p></details>
 <details><summary>O que é o Poste Inteligente da Estrutec?</summary><p>É uma solução de segurança para áreas públicas e privadas que reúne câmeras de alta resolução, inteligência artificial, monitoramento 24 horas e comunicação de ocorrências à central.</p></details>
@@ -983,6 +226,7 @@ body:has(#estrutec-lp #lead-modal[open]){overflow:hidden}
 <a class="whatsapp-float" data-whatsapp href="https://wa.me/551196278767?text=Ol%C3%A1%20vi%20dos%20an%C3%BAncios%20e%20quero%20fazer%20um%20or%C3%A7amento" target="_blank" rel="noopener noreferrer" aria-label="Falar com a Estrutec pelo WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg><span>WhatsApp</span></a>
 <footer><div class="wrap footer-inner"><div class="footer-brand"><img class="logo" src="https://cdn.jsdelivr.net/gh/viniciusgestortrafego-stack/estrutec@7f52102d3a68837c69e37e772f532509e68f5ef4/outputs/dist/assets/logo.png" alt="Estrutec Monitoramento" width="407" height="85"><p>Segurança inteligente, personalizada<br>e conectada 24 horas por dia.</p></div><address class="footer-contacts"><strong>Contatos</strong><a href="https://www.google.com/maps/dir/?api=1&destination=Estrutec%20Monitoramento%2C%20R.%20Bar%C3%A3o%20de%20Penedo%2C%20469%20-%20Cidade%20Sat%C3%A9lite%2C%20Guarulhos%20-%20SP%2C%2007222-015" target="_blank" rel="noopener noreferrer">R. Barão de Penedo, 469 - Cidade Satélite<br>Guarulhos - SP, 07222-015<br><b>Traçar rota ↗</b></a><a class="ig-link" href="https://www.instagram.com/estrutecmonitoramento/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span>@estrutecmonitoramento</span></a><a class="footer-phone" href="tel:+551150393499"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg><span><small>Ligue para a central</small>(11) 5039-3499</span></a><a href="mailto:contato@estrutecmonitoramento.com.br">contato@estrutecmonitoramento.com.br</a></address><a class="footer-top" href="#inicio">Voltar ao topo ↑</a></div><div class="wrap footer-credits"><p>Copyright © 2026 Estrutec Monitoramento &nbsp;|&nbsp; Criado por <a href="https://www.instagram.com/genius.digital1/" target="_blank" rel="noopener noreferrer">Genius Assessoria Digital</a></p></div></footer>
 </div>
+<script>(function(w,d,s,l,i){if(w.google_tag_manager&&w.google_tag_manager[i])return;w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5DLHWFCJ');</script>
 <script>
 (function () {
 // Receptor único de leads do grupo (Google Apps Script); grava na aba ESTRUTEC.
