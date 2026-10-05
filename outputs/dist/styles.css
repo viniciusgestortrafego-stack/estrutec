@@ -656,3 +656,6 @@ h3{font-size:1.4rem}
 .night-fc{margin:0 0 26px;padding:18px 20px;border-left:4px solid var(--orange);background:#121212}
 .night-copy .night-fc h3{font-family:var(--display);font-size:1.35rem;text-transform:uppercase;color:var(--orange);margin-bottom:6px}
 .night-copy .night-fc p{margin:0;font-size:16px;color:#e4e4e4}
+
+.night-photo{background:#000}
+.night-photo video{width:100%;height:100%;object-fit:cover;display:block;background:#000}
