@@ -61,6 +61,20 @@ ${body.trim()}
 (function () {
 ${endpoint}
 ${js}
+// Break out of boxed Elementor containers: stretch the page to the full width of the screen.
+function estrutecFit() {
+  var w = document.getElementById('estrutec-lp');
+  if (!w) return;
+  w.style.maxWidth = 'none';
+  w.style.marginLeft = '0px';
+  w.style.width = 'auto';
+  var left = w.getBoundingClientRect().left;
+  w.style.width = document.documentElement.clientWidth + 'px';
+  w.style.marginLeft = (-left) + 'px';
+}
+estrutecFit();
+window.addEventListener('resize', estrutecFit);
+window.addEventListener('load', function () { estrutecFit(); setTimeout(estrutecFit, 400); setTimeout(estrutecFit, 1500); });
 })();
 </script>
 `;
