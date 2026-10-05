@@ -48,7 +48,7 @@ js = js.replace('document.body.append(modal);', "(document.getElementById('estru
 
 const html = `<!--
   Estrutec Monitoramento - landing page para o widget HTML do Elementor.
-  Antes de usar, envie a pasta "assets" para ${BASE}/ (veja LEIA-ME-ELEMENTOR.md).
+  Cole este arquivo inteiro em um widget HTML do Elementor. As imagens, fontes e o video sao carregados de ${BASE}/assets/.
   O codigo do Google Tag Manager (GTM-5DLHWFCJ) NAO esta aqui: instale-o pelo tema, plugin ou Elementor > Custom Code.
 -->
 <style>
