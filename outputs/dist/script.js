@@ -8,6 +8,18 @@ const track = (event, extra) => {
   (window.dataLayer = window.dataLayer || []).push(Object.assign({ event }, extra));
 };
 
+// Ad attribution (UTMs, gclid, fbclid) kept for the session so it survives in-page navigation.
+function attribution() {
+  const keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'fbclid'];
+  const params = new URLSearchParams(location.search);
+  let saved = {};
+  try { saved = JSON.parse(sessionStorage.getItem('estrutec_attribution') || '{}'); } catch (e) {}
+  keys.forEach(k => { if (params.get(k)) saved[k] = params.get(k); });
+  try { sessionStorage.setItem('estrutec_attribution', JSON.stringify(saved)); } catch (e) {}
+  return saved;
+}
+attribution();
+
 // Every form (the hero form and the popup copy) sends the lead to the same endpoint.
 function initLeadForm(form, onSaved) {
   const submitButton = form.querySelector('.lead-submit');
@@ -66,7 +78,7 @@ function initLeadForm(form, onSaved) {
       const response = await fetch(endpoint, {
         method: 'POST', redirect: 'follow', credentials: 'omit',
         headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-        body: JSON.stringify({ ...fields, origem, brand: 'estrutec', requestId: pendingLead.requestId }),
+        body: JSON.stringify({ ...fields, ...attribution(), pagina: location.href, origem, brand: 'estrutec', requestId: pendingLead.requestId }),
         signal: controller.signal
       });
       if (!response.ok) throw new Error('http_error');
