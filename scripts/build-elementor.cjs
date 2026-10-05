@@ -78,6 +78,30 @@ function estrutecFit() {
   w.style.width = document.documentElement.clientWidth + 'px';
   w.style.marginLeft = (-left) + 'px';
 }
+// Only on this page: hide everything of the old site around the landing page (slider, footer, floating WhatsApp, etc.).
+function estrutecPurge() {
+  var w = document.getElementById('estrutec-lp');
+  if (!w) return;
+  var skip = /^(SCRIPT|STYLE|LINK|META|NOSCRIPT|TEMPLATE)$/;
+  function hide(e) { if (e.nodeType === 1 && !skip.test(e.tagName) && e.style.display !== 'none') e.style.setProperty('display', 'none', 'important'); }
+  for (var n = w; n && n !== document.documentElement; n = n.parentNode) {
+    var sib = n.parentNode ? n.parentNode.children : [];
+    for (var i = 0; i < sib.length; i++) if (sib[i] !== n) hide(sib[i]);
+  }
+  var all = document.body.getElementsByTagName('*');
+  for (var j = 0; j < all.length; j++) {
+    var e = all[j];
+    if (w.contains(e) || e.contains(w) || skip.test(e.tagName)) continue;
+    var pos = getComputedStyle(e).position;
+    if (pos === 'fixed' || pos === 'sticky') hide(e);
+  }
+}
+estrutecPurge();
+if (window.MutationObserver) {
+  var purgeTimer;
+  new MutationObserver(function () { clearTimeout(purgeTimer); purgeTimer = setTimeout(estrutecPurge, 150); }).observe(document.body, { childList: true, subtree: true });
+}
+window.addEventListener('load', function () { estrutecPurge(); setTimeout(estrutecPurge, 1000); setTimeout(estrutecPurge, 3000); });
 estrutecFit();
 window.addEventListener('resize', estrutecFit);
 window.addEventListener('load', function () { estrutecFit(); setTimeout(estrutecFit, 400); setTimeout(estrutecFit, 1500); });
